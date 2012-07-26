@@ -1,0 +1,159 @@
+# .bash_aliases
+
+#
+#
+export EDITOR="gvim"
+
+
+# Use VIm as man pager
+vman () {
+    export PAGER="/bin/sh -c \"unset PAGER;col -b -x | \
+                     vim -R -c 'set ft=man nomod nolist' -c 'map q :q<CR>' \
+                     -c 'map <SPACE> <C-D>' -c 'map b <C-U>' \
+                     -c 'nmap K :Man <C-R>=expand(\\\"<cword>\\\")<CR><CR>' -\""
+
+    # invoke man page
+    man $1
+
+    # we muse unset the PAGER, so regular man pager is used afterwards
+    unset PAGER
+}
+
+
+# 历史加上时间戳
+export HISTTIMEFORMAT="%F %T "
+
+# 备份库
+export MTMKRES=$HOME/resources
+export MTMKFLEX=/home/riptide/resources/mygit/stuff/bash/flexec.sh
+
+
+# 英语帮助
+export MANPATH="/usr/share/man"
+alias eman='man -M /usr/share/man'
+
+# maven
+export M2_HOME=$MTMKRES/mybin/maven
+export PATH=$M2_HOME/bin:$PATH
+
+# jdk
+export JAVA_HOME=$MTMKRES/oraclejava/jdk1.7.0_02
+export CLASSPATH=.:$JAVA_HOME/lib
+export PATH=$JAVA_HOME/bin:$PATH
+
+# commands
+# export PATH=$MTMKRES/mygit/stuff/bash:$PATH
+# export PATH=$MTMKRES/mygit/stuff/python:$PATH
+
+# file & folder
+alias del='mv -t ~/.local/share/Trash/files --backup=t'
+alias of="xdg-open "
+alias ls_d="ls -1d */"
+alias mv2soft=". $MTMKFLEX  'mv %1 ~/resources/softwave/'"
+alias mv2doc=". $MTMKFLEX  'mv %1 ~/Documents/'"
+alias mv2desk=". $MTMKFLEX  'mv %1 ~/Desktop/'"
+
+# kits
+alias ..="cd .."
+alias edit_rc="sudo gvim -f /etc/rc.conf &"
+alias rexbingkeys='killall -HUP xbindkeys'
+alias ccal='cal $(date +%m\ %Y)'
+alias lookpath='echo $PATH | tr ":" "\n"'
+alias watchprocess='watch "ps -eo pcpu,user,pid,cmd --sort -pcpu | head -6 "'
+alias cshort='gnome-desktop-item-edit --create-new ~/Desktop'
+alias 9="source ~/.bash_aliases;echo done"
+alias xx="quicktar"
+alias n="nautilus . "
+alias zs="~/bin/look_script_annotation"
+alias h=". $MTMKFLEX '%1 --help | less'"
+alias ssh2=". $MTMKFLEX  'ssh -p %1 -qTfnN -D 7070 %2 '"
+alias nohup2=". $MTMKFLEX 'nohup %1 > /dev/null 2>&1 & '"
+alias xyy="nohup2 'wine ~/.wine/drive_c/freegate/FreeU21.exe'"
+alias xsel2=". $MTMKFLEX  ' %1 | xsel -b ' "
+alias mkdir2=". $MTMKFLEX 'mkdir -pv %1 && cd %1'"
+alias mkdir3="mkdir -pv %1 "
+alias du2="du -sh "
+alias makebook="(cd ~/resources/test/gendoc/ ; make html)"
+alias reibus="ibus-daemon -d -x -r"
+alias getip="ifconfig | grep -E  'inet\ 地址|inet\ addr' | cut -d ':' -f2 | cut -d ' ' -f1"
+alias syncdate="sudo ntpdate -u 192.43.244.18"
+
+manswitch () { man $1 | less -p "^ +$2"; } 
+
+# grub2
+alias arch_grub_install="grub-install --boot-directory=/boot --no-floppy --recheck --debug "
+alias arch_grub_update="sudo GRUB_PREFIX="/boot/grub" grub-mkconfig -o /boot/grub/grub.cfg"
+
+# gvim
+alias gvimp="gvim -f -p "
+alias 8="gvim -f ~/.vimrc &"
+alias gs="gvim -f -S "
+alias gf='gvim --remote-silent-tab $1'
+alias 0="gvim -f ~/.bash_aliases;echo done &"
+alias gs-ubuntu="gvim -f -S ~/resources/ubuntu.vim &"
+alias gs-ctrlctrl="gvim -f -S ~/resources/ctrlctrl.vim & "
+
+# history
+alias searchistory="history | grep "
+alias history2="history | sed -e 's/\s[0-9\-]\{10\}\s[0-9\:]\{8\}\s//'"
+alias r="fc -s "
+
+
+# aptitude
+#alias i="sudo apt-get install "
+alias i="sudo pacman -S "
+alias s="aptitude search "
+alias upgrade="sudo aptitude upgrade "
+
+
+# tar
+alias tar_delete='tar --delete -f '
+alias tar_list='tar tf '
+alias tar_update='tar uPvf '
+alias tar_extract='tar xPvf '
+#alias backup="tar uPvf ~/backup-`lsb_release -r | cut -f 2`.tar /var/cache/apt/archives --exclude=/var/cache/apt/archivesa/partial/* --exclude=/var/cache/apt/archives/lock"
+function tar_clear(){
+	rm -rf `tar -tf $1`
+}
+
+# power manger
+alias restart='sudo shutdown -r now'
+alias hibernate='sudo pm-hibernate '
+alias gj="sudo shutdown -h $1"
+
+# autojump
+source /etc/profile.d/autojump.bash
+
+# nodejs
+export NODE_PATH=/usr/local/lib/node_modules
+
+# 日常维护
+source $MTMKRES/mygit/maintainance/maintainance_completion.sh
+
+
+# 
+
+_foo() 
+{
+    local cur prev opts
+    cur="${COMP_WORDS[COMP_CWORD]}"
+    prev="${COMP_WORDS[COMP_CWORD-1]}"
+    opts="number alpha"
+ 
+    case "${prev}" in
+		number)
+	    COMPREPLY=( 1 2 3)
+            return 0
+            ;;
+        alpha)
+	    COMPREPLY=( a b c )
+            return 0
+            ;;
+        *)
+        ;;
+    esac
+
+    COMPREPLY=( $(compgen -W "${opts}" ${cur}) )
+}
+complete -F _foo foo
+

@@ -1,0 +1,27 @@
+"1.0rc1
+
+loadplugins '\.(js|penta)$'
+group user
+command! hl set hlf!
+command! -nargs=* sitesearch exe "t http://www.google.com/search?q=" + encodeURIComponent("<args>") + "&sitesearch=" + window.content.location.hostname
+map -count -modes=c,i,n,t,v <C-a> <Pass>
+map -count -modes=c,i,n,t,v <C-c> <Pass>
+map -count -modes=c,i,t <C-v> <Pass>
+map -count -modes=c,i,t <C-x> <Pass>
+map -count -modes=c,i,t <C-z> <Pass>
+map -count -modes=n,v -silent <C-d> -builtin <count>:emenu<Space>Bookmarks.Bookmark<Space>This<Space>Page<Return>
+map -count -modes=n,v -silent <C-e> <count>:js<Space>new<Space>window.snippet()<Return><Space>
+map -count -modes=n,v <C-e>js <count>new<Space><Space>window.snippet()
+map -count -modes=n,v -silent <F2> <count>:<Space>set<Space>go!=TB<Return>
+map -count -modes=n h -builtin <count><count>gT
+map -count -modes=n l -builtin <count><count>gt
+map -count -modes=n,v <Leader>b -builtin <count>:emenu<Space>Bookmarks.Bookmark<Space>This<Space>Page
+map -count -modes=n,v <Leader>eg -builtin <count>:set<Space>encoding=GB2312<Return>
+map -count -modes=n,v <Leader>eu -builtin <count>:set<Space>encoding=UTF-8<Return>
+map -count -modes=n,v <Leader>x -builtin <count>:emenu<Space>Bookmarks.Bookmark<Space>This<Space>Page
+map -modes=n,v o -javascript content.getSelection().toString()!=""?dactyl.execute(":open "+ content.getSelection()):CommandExMode().open("open ")
+map -modes=n,v t -javascript content.getSelection().toString()!=""?dactyl.execute(":tabopen "+ content.getSelection()):CommandExMode().open("tabopen ")
+set defsearch=g
+set hintkeys=asdfjklgheriop
+
+" vim: set ft=pentadactyl:

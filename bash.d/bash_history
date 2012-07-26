@@ -1,0 +1,1847 @@
+ls
+#1343106404
+exit
+#1343105039
+xbindkeys
+#1343106052
+0
+#1343106410
+exit
+#1343106502
+find . -name 134305*
+#1343106521
+cat ./.config/xfce4/panel/launcher-21/13430533669.desktop
+#1343106551
+/usr/share/applications/terminator.desktop
+#1343106556
+cat /usr/share/applications/terminator.desktop
+#1343106596
+wmctrl -l -x
+#1343106684
+gvim .xbindkeysrc 
+#1343106739
+wmctrl -l -x
+#1343106835
+thunar
+#1343106854
+thunar ~
+#1343106899
+sudo vi /etc/rc.conf
+#1343107203
+exit
+#1343107298
+sudo gpasswd -a matt power
+#1343107308
+reboot
+#1343107415
+visodo
+#1343107419
+visudo
+#1343107423
+sudo visudo
+#1343107503
+man slim 
+#1343107554
+sudo pacman -S slim-themes archlinux-themes-slim
+#1343107618
+slim -p /usr/share/slim/themes/archlinux-darch-
+#1343107627
+slim -p /usr/share/slim/themes/archlinux-darch-grey
+#1343107658
+sudo gvim /etc/slim.conf 
+#1343107890
+reboot
+#1343108040
+j sou 
+#1343108781
+ls
+#1343108783
+ls *
+#1343108787
+ls -a
+#1343108801
+cat .bash_profile
+#1343108838
+echo xbindkeys >> .bash_profile 
+#1343108841
+exit
+#1343109311
+gvim ~/.xbindkeysrc 
+#1343109379
+rexbingkeys 
+#1343109383
+exit
+#1343109697
+pacman -Ss fusion-icon
+#1343109797
+i metacity
+#1343109840
+i openbox
+#1343110024
+i ttf-arphic-uming ttf-fireflysung
+#1343110072
+locale 
+#1343110096
+locale-gen 
+#1343110107
+sudo locale-gen 
+#1343110121
+0
+#1343110207
+9
+#1343110213
+edit_rc 
+#1343110259
+sudo locale-gen 
+#1343110282
+sudo locale-gen zh_CN.UTF-8
+#1343110302
+man locale-gen
+#1343110321
+locale -a
+#1343110429
+gvim .vimrc
+#1343111697
+ccsm
+#1343112758
+sudo pacman -S base-devel
+#1343112884
+s yaourt
+#1343112890
+i yaourt
+#1343113377
+gvim /etc/pacman.conf
+#1343113445
+sudo gvim /etc/pacman.conf
+#1343113510
+pacman -Syu yaourt
+#1343113523
+sudo gvim /etc/pacman.conf
+#1343113554
+sudo pacman -Sy
+#1343113563
+pacman -Syu yaourt
+#1343113567
+sudo pacman -Syu yaourt
+#1343113600
+sudo pacman -Syu yaourt --ignore glibc
+#1343113787
+sudo yaourt ntfs-3g
+#1343114169
+sudo yaourt -Sb ntfs-3g 
+#1343114421
+sudo yaourt -Sb ntfs-3g
+#1343114439
+sudo yaourt -Sb extra/ntfs-3g
+#1343114448
+man yaourt
+#1343114569
+sudo yaourt -S ntfs-3g
+#1343114583
+sudo yaourt -S pysdm
+#1343114650
+0
+#1343114711
+exit
+#1343115205
+blkid
+#1343115278
+exit
+#1343114722
+sudo yaourt -S pysdm
+#1343114841
+sudo pysdm
+#1343114859
+pysdm
+#1343114938
+sudo ntfs-3g
+#1343115004
+sudo pysdm
+#1343115009
+sudo yaourt -S pysdm
+#1343115060
+
+#1343115068
+sudo yaourt -S namcap
+#1343115086
+sudo yaourt -S pysdm
+#1343115128
+pysdm
+#1343115137
+sudo pysdm
+#1343115280
+exit
+#1343115301
+gvim .xbindkeysrc 
+#1343115339
+gvim bin/jump_or_exec.sh 
+#1343115469
+rm -rf /home/riptide/.aMule/
+#1343115600
+df -h
+#1343115643
+cp -rf /home/riptide/Desktop/ .
+#1343116829
+cp -rf /home/riptide/resources/eclipse ~/resources/
+#1343116924
+cp -rf /home/riptide/.m2 .
+#1343116959
+rm -rf /home/riptide/.m2 
+#1343116964
+df
+#1343119756
+yaourt -Syu
+#1343119767
+sudo yaourt -Syu
+#1343119838
+
+#1343119852
+sudo pacman -Syu
+#1343119864
+sudo reboot
+#1343122179
+..
+#1343122180
+ls
+#1343122205
+rm -rf test*
+#1343122210
+cd maintainance/
+#1343122223
+gvim maintainance_fns.sh 
+#1343122374
+i xsel
+#1343122390
+i ibus-anthy
+#1343122405
+i tree
+#1343122413
+i 7z
+#1343122424
+yaourt 7z
+#1343122486
+i p7zip
+#1343122505
+i curl
+#1343122522
+i chmsee
+#1343122598
+i gitk qgit python-setuptools
+#1343122608
+i qgit
+#1343122616
+i gitk
+#1343122644
+yaourt gitk
+#1343122649
+yaourt git
+#1343124237
+ssh-add id_rsa
+#1343124242
+ssh-add id2_rsa
+#1343124390
+man ssh-add
+#1343124396
+man ssh-agent
+#1343124479
+j ubuntu
+#1343124481
+ls
+#1343124487
+./deploy.sh 
+#1343124495
+ls
+#1343125182
+exit
+#1343120242
+mv /home/riptide/workspaces/ .
+#1343120442
+ls /media
+#1343120497
+ls
+#1343120499
+la
+#1343122135
+cd resources/mygit/ubuntubooks
+#1343122136
+ls
+#1343122139
+gitlg
+#1343122143
+git lg
+#1343122152
+i git
+#1343122739
+ls
+#1343122741
+git lg
+#1343122747
+ls
+#1343122751
+./quickmake.sh 
+#1343122779
+ls
+#1343122796
+git diff
+#1343122807
+ls
+#1343122816
+cat README.rst 
+#1343122825
+./makebook.sh 
+#1343122841
+./deploy.sh 
+#1343122871
+git -a -m "例行备份"
+#1343122890
+git -a /
+#1343122892
+git -a .
+#1343123022
+git add .
+#1343123044
+git ci -am "备份"
+#1343123067
+./deploy.sh 
+#1343123132
+cat deploy.sh 
+#1343123164
+..
+#1343123169
+cd ubuntubooks_pages/
+#1343123170
+ls
+#1343123174
+git lg
+#1343123225
+git push origin ph-pages
+#1343123272
+ls ~/.ssh
+#1343123295
+cd ~/.ssh
+#1343123296
+ll
+#1343123303
+rm ssh.d
+#1343123305
+ll
+#1343123474
+git remote show origin
+#1343123533
+git status
+#1343123543
+git lg
+#1343123675
+git config --global --list
+#1343123733
+ssh-add ~/.ssh/id2_rsa
+#1343123740
+i ssh
+#1343123764
+i openssh
+#1343123794
+ssh-add ~/.ssh/id2_rsa
+#1343123818
+ssh-add id2_rsa
+#1343123893
+ll
+#1343123915
+chmod 700 ~/.ssh
+#1343123918
+ssh-add id2
+#1343123937
+chmod 700 ~/resources/ssh.d/
+#1343123944
+ssh-add id2_rsa
+#1343123975
+ll ~/resources/ssh.d/
+#1343123999
+ll ~/resources/
+#1343124033
+ls
+#1343124036
+cd ~
+#1343124037
+ls
+#1343124040
+la
+#1343124044
+ls -la
+#1343124140
+rm .ssh
+#1343124149
+cp resources/ssh.d .ssh
+#1343124155
+cp -rf resources/ssh.d .ssh
+#1343124166
+chmod 700 .ssh
+#1343124169
+cd .ssh
+#1343124170
+ls
+#1343124185
+ssh-add id_rsa
+#1343124224
+ssh-agent bash
+#1343125189
+exit
+#1343131121
+cd /home/riptide/resources/softwave/
+#1343131122
+ls
+#1343131131
+ls | less
+#1343131142
+ls
+#1343131153
+cd indicator-placesplus/
+#1343131154
+ls
+#1343131319
+./indicator-placesplus.py 
+#1343131342
+python indicator-placesplus.py 
+#1343131363
+cd ../../mygit
+#1343131364
+ls
+#1343131367
+cd indicator-placesplus/
+#1343131368
+ls
+#1343131370
+./indicator-placesplus.py 
+#1343127945
+i ack
+#1343127966
+history
+#1343127989
+history | grep -e "i" -e "pacman"
+#1343128014
+history | grep -e "\ i\ " -e "pacman"
+#1343130159
+/
+#1343130171
+yaourt unity
+#1343130293
+yaourt indicator
+#1343130481
+yaourt -S indicator-weather-bzr
+#1343130724
+yaourt appmenu
+#1343130856
+yaourt -S xfce-appmenu-plugin-bzr
+#1343131391
+yaourt indicator
+#1343131430
+yaourt -S indicator-monitor 
+#1343132753
+exit
+#1343131259
+j res
+#1343131261
+ls
+#1343131269
+cd ~/resources/mygit/
+#1343131272
+git clone git://github.com/mozilla-b2g/gaia
+#1343132407
+ls
+#1343132416
+cd gaia
+#1343132417
+ls
+#1343132433
+cat README.md 
+#1343132706
+make -C gaia profile
+#1343132710
+cd ..
+#1343132713
+make -C gaia profile
+#1343134841
+cd gaia/
+#1343134842
+ls
+#1343134847
+cd ..
+#1343134848
+ls
+#1343134851
+la
+#1343134858
+exit
+#1343133774
+uptime
+#1343133784
+mene
+#1343133838
+xfce4-taskmanager 
+#1343134377
+i nautilus
+#1343134868
+yaourt thunar
+#1343135643
+sudo vi /etc/slim.conf 
+#1343136766
+man slim.conf
+#1343137132
+sudo gpasswd -a matt root
+#1343137139
+reboot
+#1343137187
+man consolekit
+#1343137193
+man consolek
+#1343137240
+hostname
+#1343137250
+hostname mattPC
+#1343137254
+sudo hostname mattPC
+#1343137257
+hostname
+#1343137262
+visudo
+#1343137265
+sudo visudo
+#1343137432
+sudo ls /
+#1343137438
+sudo -k
+#1343137441
+sudo ls /
+#1343137446
+sudo reboot
+vi .xinitrc 
+#1343139143
+yaourt slim-plugin
+#1343139222
+yaourt slim-
+#1343139271
+pacman -S slim
+#1343139274
+sudo pacman -S slim
+#1343139299
+sudo pacman -Ss slim
+#1343139740
+xfce4-session-logout 
+#1343139872
+man xfce4-session-logout
+#1343139930
+xfce4-session-editor
+#1343139938
+i bash-completion
+#1343139991
+exit
+#1343141854
+sudo fbgrab *.png
+#1343141873
+sudo pacman fbgrab *.png
+#1343141906
+sudo pacman -S  fbgrab 
+#1343141930
+fbgrab ~/test.png
+#1343141944
+sudo fbgrab ~/test.png
+#1343141955
+man fbgrab
+#1343141984
+which pacman
+#1343141997
+man which
+#1343142096
+sudo -k
+#1343142625
+pacman aria2 axel
+#1343142634
+i aria2 axel
+#1343142677
+i unrar unzip 
+#1343142694
+i xpdf
+#1343143496
+xpdf
+#1343144588
+exit
+#1343141882
+visudo
+#1343141886
+sudo visudo
+#1343144592
+exit
+#1343144612
+modprobe acpi
+#1343144619
+sudo modprobe acpi
+#1343144653
+exiy
+#1009843954
+ln -s resources/pentadactyl.d/pentadactyl.pentadactyl .pentadactyl
+#1009843978
+ln -s resources/pentadactyl.d/pentadactyl.pentadactylrc .pentadactylrc
+#1009846146
+at
+#1009847685
+date
+#1009847689
+man date
+#1009847810
+i ntpdate
+#1009847827
+yao ntpdate
+#1009847830
+yaourt ntpdate
+#1009847923
+date -s "20120725"
+#1009847931
+sudo date -s "20120725"
+#1343145620
+yaourt -S ntpdate
+#1343145844
+ntpdate ntp.sjtu.edu.cn
+#1343145848
+sudo ntpdate ntp.sjtu.edu.cn
+#1343145877
+sudo ntpdate 202.120.2.101
+#1343174158
+j book
+#1343174221
+cd books/ubuntu
+#1343174222
+ls
+#1343174230
+gvim -f -p *.rst
+#1343174981
+gs-ubuntu
+#1343174952
+grep ubuntu ~/.bash_aliases 
+#1343175421
+cat /etc/inittab
+#1343175429
+cat /etc/inittab | deamon
+#1343175434
+cat /etc/inittab | less
+#1343175559
+man xdm
+#1343175563
+whatis xdm
+#1343176564
+which x
+#1343176571
+whereis x
+#1343176697
+which xdm
+#1343176709
+whereis xmd
+#1343176712
+whereis xdm
+#1343176716
+xdm
+#1343176740
+file /usr/bin/xdm
+#1343176751
+telinit 
+#1343176753
+telinit -q
+#1343176755
+sudo telinit -q
+#1343176766
+sudo telinit Q
+#1343178452
+which firefox
+#1343184173
+runlevel 
+#1343184227
+whereis firefox
+#1343184280
+sudo reboot
+#1009858584
+runlevel
+#1009858604
+less /etc/inittab
+#1009858636
+pgrep xdm
+#1009858640
+pgrep slim
+#1009858706
+date
+#1009858715
+ntpdate ntp.sjtu.edu.cn
+#1009858718
+sudo ntpdate ntp.sjtu.edu.cn
+#1343184710
+pgrep sysv
+#1343184714
+pgrep sysvinit
+#1343184723
+pacman -Ss sysvinit
+#1343185074
+sudo pacman -S thunar-archive-plugin
+#1343185116
+pacman -S thunar-volman
+#1343185119
+sudo pacman -S thunar-volman
+#1343185763
+pacman -S thunar
+#1343185766
+sudo pacman -S thunar
+#1009860246
+sudo pacman -S thunar nptdate 
+#1009860267
+sudo ntpdate ntp.sjtu.edu.cn
+#1343186462
+pacman -Ss gaim
+#1343186474
+pacman -Ss ganim
+#1343186480
+pacman -Ss gamin
+#1343186494
+sudo pacman -S gamin
+#1343186527
+sudo pacman -Ss gvfs
+#1343186565
+sudo pacman -S gvfs gvfs-vfg
+#1343186577
+sudo pacman -S gvfs
+#1343186604
+sudo pacman -S gvfs-vfg
+#1343186648
+man udisks
+#1343186663
+gvim .xinitrc 
+#1343186709
+exit
+#1343188000
+mount /dev/sdb2 /mnt
+#1343188002
+sudo mount /dev/sdb2 /mnt
+#1343188007
+cd /mnt
+#1343188009
+ls
+#1343188050
+pacman -Si gvfs
+#1343188087
+i gvfs-afc
+#1343188250
+pacman -Si gvfs
+#1343188316
+pacman -Si thunar-volman
+#1343188537
+exit
+#1343187212
+i python2-udiskie
+#1343187257
+man udiskie
+#1343187272
+udiskie &
+#1343187461
+sudo udiskie &
+#1343187576
+gpaswd -a matt storage
+#1343187584
+sudo gpasswd -a matt storage
+#1343187608
+thunar
+#1343187628
+man thunar
+#1343187638
+thunar --deamon
+#1343187642
+man thunar
+#1343187651
+thunar --daemon
+#1343187677
+sudo thunar --daemon
+#1343188560
+pacman -Si thunar-volman
+#1343188634
+thunar --daemon
+#1343188665
+sudo thunar --daemon
+vi .xinitrc 
+startxfce4
+vi .xinitrc 
+reboot
+sudo reboot
+#1343192899
+yaourt hunar
+#1343192947
+yaourt gvfs
+#1343193297
+cat .xinitrc 
+#1343193340
+pacman gnome
+#1343193345
+pacman -S gnome
+#1343193347
+sudo pacman -S gnome
+#1343194143
+df
+#1343194723
+exit
+#1343191690
+blkid
+#1343191696
+sudo blkid
+#1343191912
+man dbus-launch
+#1343192053
+lspci -v | usb
+#1343192056
+lspci -v | grep usb
+#1343192063
+lspci -v | less
+#1343192213
+lspci 
+#1343192235
+lspci -v | grep USB
+#1343192251
+lspci -v | grep USB -A 10
+#1343192273
+modprobe ehci_hcd
+#1343192344
+modprobe uci_hcd
+#1343192350
+modprobe uhci_hcd
+#1343192560
+man thunar
+#1343192626
+man thunar-volmon
+#1343192635
+man thunar-volman
+#1343192672
+sudo thunar-volman --device-added /dev/sdb2
+#1343192678
+sudo thunar-volman --device-added /dev/sdb
+#1343192726
+sudo thunar-volman --device-added /dev/sda
+#1343192733
+man  thunar-volman --device-added /dev/sda
+#1343192738
+man  thunar-volman
+#1343192754
+yaourt thunar-volman
+#1343192775
+pacman -Syu
+#1343192778
+sudo pacman -Syu
+#1343193456
+nautilus
+#1343194731
+exit
+#1009864122
+ps -ef
+#1009864136
+ps -e | grep thunar
+#1009864163
+ps -e | grep --daemon
+#1009864174
+ps -e | grep "--daemon"
+#1009864480
+sudo thunar --daemon nptdat
+#1009864506
+ntpdate ntp.sjtu.edu.cn 
+#1009864525
+searchistory ntpdate
+#1009864535
+sudo ntpdate 202.120.2.101
+#1009864607
+sudo ntpdate ntp.sjtu.edu.cn
+#1343190675
+sudo udiskie &
+#1343190699
+kill -9 1018
+#1343190704
+sudo udiskie 
+#1343190729
+pkill thunar
+#1343190738
+thunar -daemon
+#1343190744
+thunar --daemon
+#1343190815
+yaourt udisk
+#1343190881
+man udisks
+#1343190948
+cat /var/log/slim.log 
+#1343191649
+thunar --daemon
+#1343192390
+sudo thunar --daemon
+#1343194742
+exit
+#1009869326
+ls
+#1009869362
+ls /home
+#1009869367
+cd /home/arc
+#1009869371
+sudo cd /home/arc
+#1009869383
+cd /home
+#1009869384
+ls
+#1009869387
+cd arc
+#1009869494
+thunar &
+#1009870687
+yaourt exo-mount
+#1009870781
+pacman -Sy udisks uevt gvfs gvfs-afc
+#1009870783
+sudo pacman -Sy udisks uevt gvfs gvfs-afc
+#1009870830
+ntpdate ntp.sjtu.edu.cn  
+#1009870833
+sudo ntpdate ntp.sjtu.edu.cn  
+#1009870853
+0
+#1009870902
+pacman -Sy udisks uevt gvfs gvfs-afc
+#1009870906
+sudo pacman -Sy udisks uevt gvfs gvfs-afc
+#1009870923
+sudo ntpdate ntp.sjtu.edu.cn  
+#1009870938
+sudo ntpdate
+#1009870958
+ntpdate -u 192.43.244.18
+#1009870969
+sudo ntpdate -u 192.43.244.18
+#1343196909
+sudo pacman -Sy udisks uevt gvfs gvfs-afc
+#1343196947
+0
+#1343196994
+gvim .xinitrc 
+#1343196999
+q
+#1343197001
+0
+#1343197058
+sudo reboot
+#1009871274
+syncdate 
+#1343197225
+man ntpdate
+#1343198125
+udisks
+#1343198148
+udisks --monitor
+#1343198634
+thunar & 
+#1343198645
+thunar --daemon
+#1343198664
+sudo thunar --daemon
+#1343198797
+ls /etc/udev
+#1343199469
+df
+#1343199947
+sdudo blkid /dev/sdb
+#1343199952
+sdud blkid /dev/sdb
+#1343199960
+sudo blkid /dev/sdb
+#1343199972
+sudo fdisk /dev/sdb
+#1343199990
+sudo df /dev/sdb
+#1343200010
+man blkid
+#1343200042
+sudo blkid -l /dev/sdb
+#1343200055
+sudo blkid -l -t ext4 /dev/sdb
+#1343200067
+sudo blkid -k ext4 /dev/sdb
+#1343200073
+sudo blkid -L ext4 /dev/sdb
+#1343200091
+sudo blkid
+#1343200100
+sudo blkid dev/sda
+pacman -S xorg-server xorg-server-utils xorg-xinit xorg-utils xfce4 xfce4-goodies nvidia navidia-utils
+sudo pacman -S xorg-server xorg-server-utils xorg-xinit xorg-utils xfce4 xfce4-goodies nvidia navidia-utils
+sudo pacman -S xorg-server xorg-server-utils xorg-xinit xorg-utils xfce4 xfce4-goodies nvidia nvidia-utils slim
+pacman -Ss dbus
+pacman -Ss dbus | less
+vi /etc/rc.conf
+sudo vi /etc/rc.conf
+nvidia-xconfig 
+sudo nvidia-xconfig 
+vi .xinitrc 
+exit
+exit
+#1343231956
+sudo pacman -S gvim firefox flashplugin terminator 
+#1343232022
+sudo pacman -Ss compiz-f
+#1343232037
+sudo pacman -Ss compiz-fusion-icon
+#1343232041
+sudo pacman -S compiz-fusion-icon
+#1343232048
+sudo pacman -S compiz-fusion
+#1343232100
+sudo pacman -S fusion-icon
+#1343232114
+fusion-icon
+#1343232323
+cd resources/sources/autojump/
+#1343232324
+ls
+#1343232332
+./autojump
+#1343232382
+gvim ~/installarch.rst
+#1343232430
+i ibus-pinyin ibus-anthy
+#1343232545
+cd ~
+#1343232549
+
+#1343232743
+i ttf-arphic-uming ttf-fireflysung
+#1343232850
+mount /dev/sda9 /mnt
+#1343232853
+sudo mount /dev/sda9 /mnt
+#1343232886
+pacman -Ss wqy
+#1343232915
+i ttf-arphic-uming ttf-fireflysung wqy-bitmapfont wqy-zenhei
+#1343233111
+exit
+#1343233214
+gvim installarch.rst 
+#1343233390
+i wmctrl xbindkeys
+#1343233413
+history -a
+#1343233456
+i virtualbox virtualbox-sources
+#1343233460
+i virtualbox virtualbox-source
+#1343233484
+vboxbuid
+#1343233489
+vboxbuild
+#1343233498
+whais build
+#1343233501
+whatis build
+#1343233531
+virtualbox 
+#1343233555
+sudo vboxbuild
+#1343233566
+sudo /usr/bin/vbox/build
+#1343233580
+sudo /usr/bin/vboxbuild
+#1343233647
+ping 123.123
+#1343233683
+reibus 
+#1343233725
+sudo gvim /etc/rc.config
+#1343233732
+sudo gvim /etc/rc.conf
+#1343233748
+sudo gvim /home/arc/rc.conf
+#1343233819
+sudo gvim /etc/resolv.conf 
+#1343233839
+cat /etc/resolv.conf
+#1343233842
+sudo gvim /etc/resolv.conf 
+#1343233964
+ping 123
+#1343233976
+sudo /etc/rc.d/network restart
+#1343233983
+ping 123
+#1343233999
+ping 163.com
+#1343234024
+exit
+#1343234176
+ping 8.8.8.8
+#1343234182
+ping 163.com
+#1343234198
+sudo gvim /etc/resolv.conf 
+#1343234232
+sudo /etc/rc.d/network restart
+#1343234505
+syncdate 
+#1343234514
+pacman syncdate 
+#1343234527
+pacman -S nptdate
+#1343234530
+sudo pacman -S nptdate
+#1343234535
+sudo pacman -S ntpdate
+#1343234546
+0
+#1343234621
+vboxbuild
+#1343234654
+pacman -S virtualbox virtualbox-source
+#1343234657
+
+#1343234707
+vboxbuild
+#1343234715
+virtualbox
+#1343234757
+vboxbuild
+#1343234758
+virtualbox
+#1343234775
+pacman -S virtualbox-modules
+#1343234778
+sudo pacman -S virtualbox-modules
+#1343234826
+modprobe vboxdrv
+#1343234843
+sudo modprobe vboxdrv
+#1343234920
+sudo vi /etc/rc.conf
+#1343235122
+i wqy-bitmapfont wqy-zenhei ttf-dejavu ttf-arphic-ukai ttf-arphic-uming ttf-fireflysun
+#1343235197
+i wqy-bitmapfont wqy-zenhei ttf-dejavu ttf-arphic-ukai ttf-arphic-uming ttf-fireflysung
+#1343235267
+i wqy-bitmapfont wqy-zenhei ttf-dejavu ttf-arphic-ukai ttf-arphic-uming ttf-fireflysung libxft-lcd
+#1343235287
+pacman -Ss libxft
+#1343235307
+pacman -Ss lcd
+#1343235341
+i wqy-bitmapfont wqy-zenhei ttf-dejavu ttf-arphic-ukai ttf-arphic-uming ttf-fireflysung libxft-lcd ttf-ms-fonts-zh_cn
+#1343235347
+i wqy-bitmapfont wqy-zenhei ttf-dejavu ttf-arphic-ukai ttf-arphic-uming ttf-fireflysung  ttf-ms-fonts-zh_cn
+#1343235435
+vi /etc/pacman.conf
+#1343235452
+sudo vi /etc/pacman.conf
+#1343235547
+pacman -Sya
+#1343235549
+pacman -Sy
+#1343235552
+sudo pacman -Sy
+#1343235688
+pacman -S yaourt
+#1343235691
+sudo pacman -S yaourt
+#1343235707
+yaourt ttf-ms
+#1343235741
+pacman -S ttf-ms-fonts-zh 
+#1343235744
+sudo pacman -S ttf-ms-fonts-zh 
+#1343235750
+sudo pacman -Sa ttf-ms-fonts-zh 
+#1343235870
+man yaourt
+#1343235942
+sudo pacman -Sa ttf-ms-fonts-zh 
+#1343235965
+sudo yaourt -S ttf-ms-fonts-zh --noconfirm
+#1343236056
+sudo yaourt -S ttf-ms-webfonts  --noconfirm
+#1343236147
+sudo yaourt -S ttf-ms-fonts-zh_cn  --noconfirm
+#1343236786
+yaourt ttf-ms
+#1343236825
+sudo yaourt -S ttf-ms-fonts  --noconfirm
+#1343236923
+sudo yaourt -R ttf-ms-webfonts
+#1343236949
+sudo yaourt -S ttf-ms-fonts  --noconfirm
+#1343237504
+history -a
+#1343237543
+i freemind amule smplayer
+#1343237573
+i openjdk6 freemind amule smplayer
+#1343237862
+i openjdk6 freemind amule smplayer stellarium
+#1343238159
+i ristretto Deluge
+#1343238170
+i ristretto 
+#1343238196
+yaourt Deluge
+#1343238207
+i ristretto deluge
+#1343238377
+i chmsee epdfview
+#1343238413
+p7zip
+#1343238419
+i p7zip unrar
+#1343238428
+i p7zip unrar unzip
+#1343238705
+yaourt nptdate
+#1343238711
+yaourt ntpdate
+#1343238747
+yaourt -S ntpdate --nocomfirm
+#1343238751
+sudo yaourt -S ntpdate --nocomfirm
+#1343238764
+sudo yaourt -S ntpdate --noconfirm
+#1343238949
+pacman -S ntpdate
+#1343238957
+sudo pacman -Ss ntpdate
+#1343239081
+i alsa-utils
+#1343239330
+sudo echo "options snd-NAME-OF-MODULE ac97_quirk=0" > /etc/modprobe.d/modprobe.conf"
+
+
+#1343239350
+sudo  echo "options snd-NAME-OF-MODULE ac97_quirk=0" > /etc/modprobe.d/modprobe.conf")
+#1343239368
+sudo echo "options snd-NAME-OF-MODULE ac97_quirk=0" > /etc/modprobe.d/modprobe.conf
+#1343239392
+sudo sh -c 'echo "options snd-NAME-OF-MODULE ac97_quirk=0" > /etc/modprobe.d/modprobe.conf'q
+#1343239401
+cat /etc/modprobe.d/modprobe.conf
+#1343239417
+manswitch sh -c
+#1343239504
+history -a
+#1343239506
+exit
+#1343240689
+yaourt shooter
+#1343240717
+yaourt shoter
+#1343240731
+yaourt shooter
+#1343240896
+sudo mv /boot/grub /boot/grub-legacy
+#1343240917
+pacman -S grub-bios
+#1343240920
+sudo pacman -S grub-bios
+#1343241062
+modprobe dm-mod
+#1343241076
+grub-install --boot-directory=/boot --no-floppy --recheck --debug /dev/sda
+#1343241082
+sudo grub-install --boot-directory=/boot --no-floppy --recheck --debug /dev/sda
+#1343241161
+cp /usr/share/grub/unicode.pf2 /boot/grub
+#1343241163
+sudo cp /usr/share/grub/unicode.pf2 /boot/grub
+#1343241175
+sudo cp /usr/share/grub/ascii.pf2 /boot/grub
+#1343241325
+sudo GRUB_PREFIX="/boot/grub" grub-mkconfig -o /boot/grub/grub.cfg
+#1343241407
+sudo cd /etc/default/grub 
+#1343241416
+ls /etc/default/grub 
+#1343241443
+i bash-completeion
+#1343241454
+yaourt bash-compl
+#1343241490
+ls /etc/default/grub 
+#1343241625
+ls /etc/grub.d/
+#1343241669
+sudo gvim /etc/defualt/gru
+#1343242481
+yaourt screen
+#1343242495
+yaourt shooter
+#1343242831
+yaourt shutter
+#1343244305
+date
+#1343244443
+yaourt -S ntpdate
+#1343244661
+pacman -Syu
+#1343244664
+sudo pacman -Syu
+#1343244700
+yaourt shutter ntpdate
+#1343244705
+yaourt shutter 
+#1343245198
+pacman-key --populate archlinux
+#1343245209
+sudo ppacman-key --populate archlinux
+#1343245218
+sudo pacman-key --populate archlinux
+#1343245234
+yaourt shutter --noconfirm
+#1343245247
+yaourt -S  shutter --noconfirm
+#1343245291
+yaourt -S  ntpdate --noconfirm
+#1343245493
+syncdate 
+#1343216730
+yaourt -S shutter --noconfirm
+#1343216770
+pacman -S libcanberra
+#1343216773
+sudo pacman -S libcanberra
+#1343216901
+yaourt libcanberra
+#1343217163
+pacman-key -r @falconindy.com>
+#1343217168
+pacman-key -r d@falconindy.com>
+#1343217175
+pacman-key -r "d@falconindy.com>"
+#1343217178
+sudo pacman-key -r "d@falconindy.com>"
+#1343217203
+pacman -S archlinux-keyring
+#1343217206
+sudo pacman -S archlinux-keyring
+#1343217222
+yaourt -S shutter --noconfirm
+#1343217253
+sudo pacman -S libcanberra
+#1343217326
+sudo vi /etc/pacman.conf
+#1343217377
+sudo pacman -S libcanberra
+#1343217411
+sudo vi /etc/pacman.conf
+#1343217449
+sudo pacman -S libcanberra[A
+#1343217451
+sudo pacman -S libcanberra
+#1343217473
+vi /etc/pacman.conf
+#1343217519
+sudo vi /etc/pacman.conf
+#1343217537
+sudo pacman -S libcanberra
+#1343217775
+sudo pacman-key -r  0xF56C0C53
+#1343217787
+sudo pacman -S libcanberra
+#1343217816
+sudo vi /etc/pacman.conf 
+#1343217838
+sudo pacman -S libcanberra
+#1343217853
+manswitch pacman-key -r
+#1343217872
+pacman-key --populate archlinux
+#1343217877
+sudo pacman-key --populate archlinux
+#1343217887
+pacman-key --init
+#1343217890
+sudo pacman-key --init
+#1343217893
+sudo pacman-key --populate archlinux
+#1343217922
+sudo pacman -S libcanberra
+#1343218088
+sudo pacman -Ss libcanberra
+#1343218149
+pacman -Ss shoot
+#1343218199
+pacman -Ss scrot
+#1343218233
+pacman -S scrot
+#1343218236
+sudo pacman -S scrot
+#1343218258
+
+#1343218277
+of
+#1343218287
+of *.png
+#1343218373
+sudo pacman -S ntfs-39
+#1343218380
+sudo sudo pacman -S ntfs-3g
+#1343218393
+yaourt -S pysdm
+#1343218446
+sudo pysdm &
+#1343218466
+pysdm 
+#1343218481
+man pysdm 
+#1343218486
+sudo  pysdm 
+#1343218793
+exit
+#1343247784
+yaourt thunar
+#1343247829
+pacman -Ss thunar
+#1343247895
+thunar --daemon
+#1343247916
+sudo thunar --daemon
+#1343247955
+sudo pysdm
+#1343248074
+screenshot
+#1343248092
+pacman -Ss screenshot
+#1343248326
+yaourt -S pysdm --noconform
+#1343248332
+yaourt -S pysdm --noconfirm
+#1343248451
+sudo pysdm
+#1343248507
+df
+#1343248580
+syncdate 
+#1343219920
+sudo vi /etc/default/grub
+#1343221003
+vi /etc/slim.conf 
+#1343221235
+sudo vi /etc/slim.conf 
+#1343221335
+sudo vi /etc/default/grub
+#1343221602
+exit
+#1343219997
+yaourt grub
+#1343220041
+yaourt -S grub-gfx-themes --noconfirm
+#1343220328
+searchistory grub-install
+#1343220348
+0
+#1343220503
+q
+#1343220518
+searchistory GRUB
+#1343220527
+0
+#1343220703
+9
+#1343220710
+arch_grub_update 
+#1343220750
+yaourt slim
+#1343220795
+pacman -S archlinux-themes-slim
+#1343220798
+sudo pacman -S archlinux-themes-slim
+#1343220974
+gvim /home/matt/installarch.rst &
+#1343221064
+ls /usr/share/slim/themes/
+#1343221085
+ls /usr/share/slim/themes/arch*
+#1343221093
+ls -1 /usr/share/slim/themes/arch*
+#1343221097
+ls -1d /usr/share/slim/themes/arch*
+#1343221131
+=/share/slim/themes/arch
+#1343221132
+ls -1d /usr/share/slim/themes/arch*
+#1343221132
+=/share/slim/themes/arch
+#1343221147
+cd /usr/share/slim/themes/archlinux-retro/
+#1343221148
+ls
+#1343221152
+of background.jpg 
+#1343221163
+cd ..
+#1343221164
+ls
+#1343221174
+cd archlinux-darch-white/
+#1343221175
+ls
+#1343221179
+of background.png 
+#1343221186
+cd ..
+#1343221188
+ls
+#1343221194
+cd archlinux-retro/
+#1343221195
+ls
+#1343221199
+of background.jpg 
+#1343221604
+exit
+#1343252036
+beep
+#1343252042
+yaourt beep
+#1343252055
+i beep
+#1343252062
+beep
+#1343252072
+man beep
+#1343252090
+beep
+#1343252101
+beep /dev/tty0
+#1343252105
+beep
+#1343252108
+sudo beep
+#1343252116
+sudo -k
+#1343252120
+sudo beep
+#1343252533
+df
+#1343252645
+i compiz-fusion
+#1343252785
+exit
+#1343252912
+fusion-icon
+#1343252932
+fusion-icon --replace
+#1343252939
+man fusion-icon
+#1343253101
+compiz --replace
+#1343253132
+fusion-icon
+#1343253203
+ccsm
+#1343253751
+wmctrl -l -x
+#1343253582
+man wmctrl
+#1343253745
+terminator 
+#1343254528
+gawk
+#1343254551
+gvim /bin/movewindow.sh
+#1343254611
+gvim ~/bin/movewindow.sh
+#1343254656
+man xrandr
+#1343254738
+xbindkeys_show 
+#1343254745
+xbindkeys -k
+#1343254904
+rexbingkeys 
+#1343254966
+chmod +x bin/movewindow.sh 
+#1343254979
+movewindow.sh -br
+#1343255021
+movewindow.sh -fs
+#1343255042
+movewindow.sh -l
+#1343255076
+xbindkeys -k
+#1343255100
+rexbingkeys 
+#1343255162
+syncdate
+#1343255193
+rexbingkeys 
+#1343255252
+syncdate
+#1343255565
+ping 127.0.0.1
+#1343255574
+ping 8.8.8.8
+#1343255644
+man xrandr
+#1343255822
+xrandr -d 0.0 -q
+#1343255829
+xrandr -d matt -q
+#1343255858
+movewindow.sh 23123123
+#1343255865
+xrandr -d :0.0 -q
+#1343255973
+ping 8.8.8.8
+#1343256122
+sudo reboot
+#1343256395
+ping 1.1.1.1
+#1343256403
+ping 127.0.0.1
+#1343256412
+ping 163.com
+#1343257439
+date -s 20120725 23:05
+#1343257448
+date -s "20120725 23:05"
+#1343257568
+sudo date -s "20120725 23:05"
+#1343228728
+exit
+#1343229117
+i gvfs
+#1343229134
+man gvfs
+#1343229148
+i gvfs-afs
+#1343229154
+i gvfs-aps
+#1343229167
+pacman -Ss gvfs-s
+#1343229184
+pacman -Ss gvfs.afs
+#1343229189
+pacman -S gvfs.afs
+#1343229193
+sudo pacman -S gvfs.afs
+#1343229201
+exit
+#1343229231
+sudo thunar --daemon
+#1343229408
+uptime
+#1343229424
+manswitch gawk -F
+#1343229441
+manswitch gawk -x
+#1343229542
+searchistory rand
+#1343229549
+xrandr -d :0.0 -q
+#1343229564
+xrandr -d :0.0 -q xx
+#1343232014
+q[; ; F
+#1343232031
+ping 221.137.32.1
+#1343232068
+ping 8.8.8.8
+#1343232090
+ping 163.com
+#1343283462
+vi /etc/rc.conf
+#1343283488
+sudo vi /etc/rc.conf
+#1343283558
+modprobe vboxdrv
+#1343283567
+lsmod | grep vbox
+#1343283586
+grep MODU rc.conf
+#1343283591
+grep MODU /etc/rc.conf
+#1343283605
+modprobe vboxdrv
+#1343283628
+sudo modprobe vboxdrv
+#1343283705
+sudo vi /etc/rc.conf
+#1343283839
+ping 8.8.8.8
+#1343284119
+ping  127.0.0.1
+#1343284392
+ping -c 38.8.8.8
+#1343284395
+ping -c 3 8.8.8.8
+#1343263919
+cd resources/sources/autojump/
+#1343263919
+ls
+#1343263922
+./autojump
+#1343263931
+exit
+#1343263940
+cd resources/sources/autojump/
+#1343263942
+ls
+#1343263946
+./install.sh 
+#1343263954
+sudo ./install.sh 
+#1343264819
+arch_grub_install 
+#1343264834
+arch_grub_install /dev/sda
+#1343264839
+sudo arch_grub_install /dev/sda
+#1343264855
+alias arch_grub_install
+#1343264881
+sudo grub-install --boot-directory=/boot --no-floppy --recheck --debug /dev/sda
+#1343264897
+sudo arch_grub_update 
+#1343264904
+arch_grub_update 
+#1343265093
+syncdate 
+#1343265304
+ifconfig
+#1343265371
+vi /etc/rc.conf
+#1343265401
+ifconfig eth0
+#1343265430
+cat /etc/rc.local
+#1343266816
+i dhcp
+#1343266867
+man dhcpcd
+#1343266983
+ntpd
+#1343267423
+ip addr | sed '/^[0-9]/!d;s/: <.*$//'
+#1343267441
+ip addr 
+#1343267563
+ipcale
+#1343267570
+ipcalc
+#1343267577
+i ipcalc
+#1343267585
+ipcalc
+#1343267611
+ipcalc 221.137.36.2
+#1343267683
+ipcalc -nb  221.137.36.2 -s 1
+#1343267804
+man xfce4-session-logout 
+#1343269020
+ls
+#1343269473
+gvim installarch.rst 
+#1343269584
+pacman -S yaourt
+#1343269588
+sudo pacman -S yaourt
+#1343269668
+tail /etc/pacman.conf 
+#1343269738
+[archlinuxfr]
+#1343269739
+Server = http://repo.archlinux.fr/$arch
+#1343269756
+sudo sh -c 'echo -e "[archlinuxfr]\nServer = http://repo.archlinux.fr/$arch"'
+#1343269802
+sudo sh -c 'echo -e "[archlinuxfr]\nServer = http://repo.archlinux.fr/$arch" >> /etc/pacman.conf'
+#1343269808
+tail /etc/pacman.conf 
+#1343269823
+sudo sh -c 'echo -e "[archlinuxfr]\nServer = http://repo.archlinux.fr/\$arch" >> /etc/pacman.conf'
+#1343269824
+tail /etc/pacman.conf 
+#1343269831
+sudo vi /etc/pacman.conf
+#1343269954
+gvim resources/mygit/maintainance/maintainance_fns.sh 
+#1343270071
+visudo
+#1343270076
+sudo visudo
+#1343271030
+sudo nvidia-xconfig 
+#1343271041
+pacman -S slim-themes archlinux-themes-slim
+#1343271044
+sudo pacman -S slim-themes archlinux-themes-slim
+#1343271955
+exit
+#1343272964
+gvim bin/movewindow.sh 
+#1343273057
+man xrandr -d
+#1343273063
+manswitch xrandr -d
+#1343273094
+manswitch xrandr -q
+#1343273122
+manswitch xrandr -q -d
+#1343273132
+manswitch xrandr -d -q 
+#1343273148
+manswitch xrandr -d :0.0 -q 
+#1343273166
+manswitch xrandr -d :0.0 -q | grep *
+#1343273177
+
+#1343273195
+manswitch xrandr -d :0.0 -q > /tmp/123
+#1343273206
+cat /tmp/123
+#1343273353
+xrandr -d :0.0 -q | grep "*" | gawk '{ print $1}'
+#1343273604
+xrandr  -q 
+#1343273749
+manswitch wmctrl -r
+#1343273853
+wmctrl -r :ACTIVE: -b remove,maximized_horz
+#1343273866
+wmctrl -r :ACTIVE: -b remove,maximized_horz,maximinzed_vert
+#1343273868
+wmctrl -r :ACTIVE: -b remove,maximized_horz,maximinzed_vert1
+#1343273908
+wmctrl -r :ACTIVE: -b remove,fullscreen
+#1343273919
+wmctrl -r :ACTIVE: -b fullscreen
+#1343273950
+manswitch wmctrl -b
+#1343274110
+wmctrl -r :ACTIVE: -b toggle,fullscreen
+#1343274215
+man wmctrl  -e
+#1343274223
+manswitch wmctrl  -e
+#1343276920
+xbindkeys -k
+#1343277068
+rexbingkeys 
+#1343277176
+xbindkeys -k
+#1343277270
+rexbingkeys 
+#1343277643
+gvim bin/movewindow.sh 
+#1343277745
+xbindkeys -k
+#1343278020
+rexbingkeys 
+#1343278165
+xbindkeys -k
+#1343278428
+rexbingkeys 
+#1343278580
+xbindkeys -k
+#1343278605
+rexbingkeys 
+#1343278656
+xbindkeys -k
