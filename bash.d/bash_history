@@ -1845,3 +1845,1962 @@ xbindkeys -k
 rexbingkeys 
 #1343278656
 xbindkeys -k
+#1343286048
+ping -c 2 163.com
+#1343286207
+terminator
+#1343286668
+wmctrl -l
+#1343286680
+wmctrl -l -r :ACTIVE:
+#1343286684
+wmctrl  -r :ACTIVE:
+#1343286705
+man wmctrl
+#1343286809
+wmctrl -w
+#1343286812
+man wmctrl
+#1343286830
+wmctrl -d
+#1343286856
+man wmctrl
+#1343286896
+wmctrl -l -x
+#1343286931
+man wmctrl
+#1343286944
+wmctrl -m
+#1343286949
+man wmctrl
+#1343287060
+terminator
+#1343287089
+terminator &
+#1343287106
+wmctrl -l | grep
+#1343287195
+wmctrl -l -x
+#1343287324
+man wmctrl
+#1343287359
+wmctrl -l -g
+#1343287361
+wmctrl -l -G
+#1343287406
+man wmctrl
+#1343287422
+wmctrl -l -G -p
+#1343287438
+wmctrl -l -G -p -x
+#1343287458
+man wmctrl
+#1343294093
+wmctrl -l -x -g
+#1343294097
+wmctrl -l -x -G
+#1343294118
+pgrep firefox
+#1343294199
+man wmctrl
+#1343294228
+i ewmh
+#1343294283
+yaourt ewmh
+#1343296127
+ls
+#1343296134
+rm dead.letter 
+#1343296139
+rm rectangle.png 
+#1343296142
+ll
+#1343296289
+ls .ssh
+#1343296298
+file .ssh
+#1343296304
+file -v .ssh
+#1343296327
+file -i .ssh
+#1343296334
+la
+#1343296478
+j '/home/matt/resources/mygit/maintainance' 
+#1343296479
+;s
+#1343296485
+git show remote
+#1343296491
+git remote show
+#1343296495
+git remote show -v
+#1343296499
+git remote show 
+#1343296503
+git remote show --detail
+#1343296513
+gs-ubuntu
+#1343296618
+git remote -v
+#1343296668
+git remote show
+#1343296676
+git remote show origin
+#1343297029
+cd ~/.ssh
+#1343297042
+ssh-add id2_rsa
+#1343297065
+ssh-add id_rsa
+#1343297197
+cat config
+#1343297587
+cd -
+#1343297593
+gir remote origin
+#1343297602
+git remote -v
+#1343302004
+cd ~
+#1343302005
+ls
+#1343302006
+la
+#1343302039
+mv .bashrc ~/resources/mygit/myarch/bash.d/bash.bashrc
+#1343302053
+ln -s ~/resources/mygit/myarch/bash.d/bash.bashrc .bashrc
+#1343302055
+ls
+#1343302058
+la
+#1343302059
+ll
+#1343302087
+ll .bash*
+#1343302104
+rm .bash_*
+#1343302722
+manswitch ln -f
+#1343302986
+ls
+#1343302987
+la
+#1343302993
+la .bash*
+#1343303029
+rm .bash.bashrc 
+#1343303032
+ls
+#1343303033
+rm .bash.bashrc 
+#1343303045
+ll -a .bash*
+#1343303101
+man mkdir
+#1343303112
+mkdir /tmp/1
+#1343303117
+mkdir -p /tmp/1
+#1343303246
+mkdir -pv /tmp/1
+#1343303251
+mkdir -pv /tmp/2
+#1343304508
+la .p*
+#1343304523
+la
+#1343304533
+ll .pent*
+#1343304549
+rm .pentadactyl .pentadactylrc
+#1343304895
+ll .pent*
+#1343306933
+la .bash
+#1343306936
+la .bash*
+#1343296899
+git pull
+#1343296907
+git remote -v
+#1343296965
+git fetch origin
+#1343296977
+ls
+#1343296980
+git st
+#1343297016
+git fetch origin
+#1343297179
+ping github.com
+#1343297384
+git push -u origin master
+#1343297524
+ping github-riptide.com
+#1343297576
+git remote origin
+#1343297645
+git remote -v
+#1343297680
+git remote rm origin
+#1343297686
+git remote -v
+#1343297754
+git remote add origin git@github-riptide.com:riptide766/myarch.git
+#1343297764
+git remot -v
+#1343297768
+git remote -v
+#1343297801
+git ci -a -m "init"
+#1343297810
+git push -u origin master
+#1343297841
+git pull
+#1343297872
+git pull origin master
+#1343297894
+ls
+#1343298067
+git rename README.md README.rst
+#1343298078
+git mv README.md README.rst
+#1343298080
+ls
+#1343299396
+git st
+#1343301821
+ls
+#1343302173
+gvim setbash.sh
+#1343302280
+ls bash.d
+#1343302454
+TESTX="aaa.bbbb"
+#1343302465
+TESTX="aaa.bbbb"
+#1343302496
+echo ${TESTX#.*}
+#1343302513
+echo ${TESTX#\.*}
+#1343302521
+echo ${TESTX##a*}
+#1343302523
+echo ${TESTX##b*}
+#1343302527
+echo ${TESTX#b*}
+#1343302545
+echo ${TESTX:3}
+#1343302551
+echo ${TESTX"4}
+
+#1343302557
+echo ${TESTX:4}
+#1343302594
+ls
+#1343302605
+chmod +x setbash.sh 
+#1343302628
+./setbash.sh 
+#1343302917
+git mv bash.d/bash.bashrc bash.d/bashrc
+#1343302929
+git add .
+#1343302932
+git mv bash.d/bash.bashrc bash.d/bashrc
+#1343302937
+git st
+#1343302963
+git rm bah
+#1343302969
+./setbash.sh 
+#1343303067
+ls
+#1343303181
+ls shortkey.d/
+#1343303211
+mv ~/bin/jump_or_exec.sh  shortkey.d/
+#1343303551
+ls shortkey.d/
+#1343303565
+./setbash.sh 
+#1343303647
+ls shortkey.d/
+#1343303698
+./setbash.sh 
+#1343303748
+cat ~/.xbindkeysrc 
+#1343303856
+./setbash.sh 
+#1343303896
+cat ~/.xbindkeysrc 
+#1343303898
+./setbash.sh 
+#1343303970
+ext="aaaaaq.txt"
+#1343303980
+echo ${ext}
+#1343303984
+echo ${ext$.*}
+#1343303988
+echo ${ext#.*}
+#1343303991
+echo ${ext%.*}
+#1343304013
+echo ${ext%5.*}
+#1343304016
+echo ${ext%%.*}
+#1343304021
+echo ${ext#.*}
+#1343304024
+echo ${ext##.*}
+#1343304181
+echo ${ext#*}
+#1343304184
+echo ${ext#.*}
+#1343304188
+echo ${ext#*.}
+#1343304261
+./setbash.sh 
+#1343304448
+git st
+#1343304457
+git add .
+#1343304458
+ls
+#1343304461
+git st
+#1343304494
+ls
+#1343304669
+ls pentadactyl.d/
+#1343304826
+echo ${ext%.*}
+#1343304842
+echo ${ext#*}
+#1343304848
+echo ${ext#*}.
+#1343304853
+echo ${ext#*.}
+#1343304876
+./setbash.sh 
+#1343305006
+echo ${ext#*.}
+#1343305022
+echo ${ext%*.}
+#1343305028
+echo ${ext%%*.}
+#1343305103
+ext=aaaa.bbbb.cccc
+#1343305106
+echo ${ext%%*.}
+#1343305143
+echo ${ext%%.*}
+#1343305147
+echo ${ext%.*}
+#1343305163
+ext=aaaa.bbbb.cccc.
+#1343305166
+echo ${ext%.*}
+#1343305184
+ext=aaaa.bbbb.cccc.kkk
+#1343305185
+echo ${ext%.*}
+#1343305199
+echo ${ext%*.}
+#1343305242
+echo ${ext%.*}
+#1343305270
+cd ~/resources/
+#1343305271
+ls
+#1343305275
+rm bash.d
+#1343305306
+del bash.d pentadactyl.d/
+#1343305307
+ls
+#1343305315
+ls ssd.d
+#1343305319
+ls ssh.d
+#1343305338
+file ssh.d/id2_rsa
+#1343306007
+ls
+#1343306027
+tree gvim.d
+#1343306048
+q
+#1343306050
+ls
+#1343306058
+du2 gvim.d
+#1343306092
+cat ~/.vimrc 
+#1343306100
+ls
+#1343306103
+ls gvim.d
+#1343306116
+thunar .
+#1343306662
+ls
+#1343306669
+j arch
+#1343306670
+ls
+#1343306675
+./setbash.sh 
+#1343306706
+git st
+#1343306716
+git add .
+#1343306719
+du2 .
+#1343306725
+du2 pentadactyl.d/
+#1343306731
+ls
+#1343306737
+du2 install.d/
+#1343306747
+du2 -s pentadactyl.d/
+#1343306756
+du2 bash.d
+#1343306775
+ls
+#1343306778
+git st
+#1343306790
+git add -a -m "备份"
+#1343306797
+git ci -a -m "备份"
+#1343306827
+git push origin master
+#1343306882
+ls
+#1343306914
+git rm bash.d/.bash_logout.swp
+#1343306919
+git st
+#1343287496
+wmctrl -r :ACTIVE:
+#1343287503
+wmctrl -r :ACTIVE: wmctrl
+#1343287552
+wmctrl -F
+#1343287562
+wmctrl -l -F
+#1343292868
+funsion-icon
+#1343292873
+fusion-icon
+#1343294448
+wmctrl -l
+#1343296063
+j myarch
+#1343296065
+ls
+#1343296069
+git init
+#1343296087
+i git python-sphinx
+#1343296112
+i openssh
+#1343296157
+ls
+#1343296164
+gvim install.d/installarch.rst 
+#1343296432
+ls
+#1343296436
+git init
+#1343296439
+ls
+#1343296442
+git st
+#1343296651
+git remote -v
+#1343296770
+git remote add origin git://github-riptide.com/riptide766/myarch.git
+#1343296780
+ls
+#1343296785
+git add .
+#1343296786
+ls
+#1343296789
+git st
+#1343296869
+git pull
+#1343296894
+ssh-agent bash
+#1343307165
+gvim .bash_logout
+#1343307278
+j arch
+#1343307280
+ls
+#1343307286
+git st
+#1343307669
+gvim ~/.bash_history
+#1343307767
+gvim /home/matt/.bash_profile 
+#1343308378
+yaourt man-page
+#1343308413
+yaourt -S man-pages-zh_cn
+#1343308496
+eman ls
+#1343308502
+man ls
+#1343308623
+echo $PS1
+#1343308870
+man xfce4-panel 
+#1343308897
+wmctrl -l -x
+#1343308945
+
+#1343308971
+wmctrl -l -x
+#1343308976
+man history
+#1343308987
+man record
+#1343308989
+man history
+#1343309044
+cat /etc/skel/.bash_profile 
+#1343309077
+mount /dev/sda9 /mnt
+#1343309080
+sudo mount /dev/sda9 /mnt
+#1343309083
+ls
+#1343309105
+cat /mnt/etc/skel/.bashrc
+#1343309176
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+#1343309181
+alert 123
+#1343309192
+la
+#1343309199
+ls
+#1343309203
+cd ~
+#1343309203
+ls
+#1343309205
+la
+#1343309283
+comgen -a
+#1343309305
+compgen -a
+#1343309430
+cp /mnt/etc/skel/.bashrc ~/Desktop/bashrc
+#1343309441
+cp /mnt/etc/skel/.profile ~/Desktop/profile
+#1343309724
+sudo pacman -Syu
+#1343309785
+ls
+#1343309789
+ls .*
+#1343309798
+ls -1d .*
+#1343309834
+ls /etc/bash*
+#1343309861
+cat /etc/bash.bashrc 
+#1343310079
+cat /etc/profile
+#1343310091
+less /etc/profile
+#1343311024
+j in
+#1343312073
+uname -r
+#1343312286
+searchistory pacman
+#1343312326
+searchistory i\ 
+#1343312350
+gvim ../myarch/install.d/installarch.rst 
+#1343312368
+i gitk
+#1343312380
+i qgit
+#1343312396
+i subversion
+#1343312438
+i yaourt
+#1343312445
+searchistory yaourt
+#1343312473
+beep
+#1343312527
+exit
+#1343312675
+j mygit
+#1343312678
+ls
+#1343312683
+cd stuff/
+#1343312684
+ls
+#1343312687
+cd bash
+#1343312688
+ls
+#1343312699
+cat flexcmd.py 
+#1343312722
+ls
+#1343312750
+cat books
+#1343312778
+ls
+#1343313012
+echo -e "dfd"
+#1343313038
+echo -e "dfd/c"
+#1343313050
+echo -e "dfd:/c"
+#1343313058
+echo -e "dfd:\nc"
+#1343313062
+echo -e "dfd:\n\cc"
+#1343313070
+echo -e "dfd\cc"
+#1343313081
+echo -e "aaaa\c"
+#1343313094
+gs-ubuntu 
+#1343313460
+o
+#1343313463
+0
+#1343313636
+9
+#1343313649
+pacs tree
+#1343313659
+pac tree
+#1343313662
+sudo pac tree
+#1343314048
+0
+#1343314526
+vman man
+#1343316747
+gvim /etc/skel/.bash_profile
+#1343316762
+gvim /etc/skel/.bashrc
+#1343316921
+cat /etc/bash.bashrc
+#1343318362
+exit
+#1343342336
+0
+#1343342498
+exit
+#1343342514
+0
+#1343342567
+exit
+#1343343674
+namei
+#1343343685
+man namei
+#1343343715
+j myarch
+#1343343731
+namei -m $(pwd)
+#1343343758
+namei -m ~
+#1343343769
+man namei
+#1343343802
+namei -m -l $(pwd)
+#1343343826
+namei -m -lo $(pwd)
+#1343343845
+namei -m -lon $(pwd)
+#1343344903
+unzip /home/matt/Desktop/1.0.zip 
+#1343345029
+cd ~/Desktop/
+#1343345030
+ls
+#1343345046
+cd -
+#1343345047
+ls
+#1343345058
+cd goagent/
+#1343345059
+ls
+#1343345066
+cd local/
+#1343345067
+ls
+#1343346321
+vi proxy.ini 
+#1343346420
+cd ..
+#1343346421
+ls
+#1343346431
+cd server/
+#1343346432
+ls
+#1343346642
+upzip ~/Desktop/google_appengine_1.7.0.zip 
+#1343346654
+unzip ~/Desktop/google_appengine_1.7.0.zip 
+#1343346675
+ls
+#1343346682
+cd google_appengine/
+#1343346683
+ls
+#1343346729
+cd ..
+#1343346730
+ls
+#1343346748
+cp google_appengine/ ../../
+#1343346751
+ls
+#1343346753
+cd ..
+#1343346757
+ls
+#1343346773
+cd goagent/
+#1343346773
+ls
+#1343346777
+cd server
+#1343346777
+ls
+#1343346790
+mv google_appengine ~/resources/myarch
+#1343346793
+cd ~/resources/myarch
+#1343346794
+ls
+#1343346819
+pwd
+#1343346827
+ll
+#1343346838
+cd ..
+#1343346842
+ls
+#1343346851
+mv myarch google_engine
+#1343346852
+ls
+#1343346855
+cd google
+#1343346857
+cd google_engine/
+#1343346859
+ls
+#1343346955
+python appcfg.py update ~/resources/mygit/myarch/goagent/server/python
+#1343346972
+python2.7
+#1343346989
+python2.7 appcfg.py update ~/resources/mygit/myarch/goagent/server/python
+#1343347027
+yaourt dos2
+#1343347062
+pac dos2unix
+#1343347066
+sudo pac dos2unix
+#1343347140
+sudo pacman -S dos2unix
+#1343347281
+python2.7 appcfg.py update ~/resources/mygit/myarch/goagent/server/python
+#1343348083
+ping 8.8.8.8
+#1343348219
+sudo gvim /etc/rc.conf
+#1343348279
+rc.d networkrestart
+#1343348282
+rc.d network restart
+#1343348322
+/etc/rc.d/network restart
+#1343348328
+sudo /etc/rc.d/network restart
+#1343348375
+dhcpcd -k
+#1343348381
+sudo dhcpcd -k
+#1343348391
+dhcpcd eth0
+#1343348394
+sudo dhcpcd eth0
+#1343348405
+pkill dhcpcd
+#1343348409
+sudo pkill dhcpcd
+#1343348412
+ls
+#1343348419
+dhcpcd eth0
+#1343348423
+sudo dhcpcd eth0
+#1343348485
+dhcpcd -k
+#1343348488
+sudo dhcpcd -k
+#1343348698
+sudo dhcpcd 
+#1343348763
+ifconfig
+#1343348788
+sudo dhcpcd eth0
+#1343348807
+sudo dhcpcd -k
+#1343348818
+sudo dhcpcd eth0
+#1343348824
+sudo dhcpcd -k
+#1343348932
+sudo dhcpcd 
+#1343348950
+pkill -dhcpcd
+#1343348955
+pkill dhcpcd
+#1343348959
+sudo pkill dhcpcd
+#1343348968
+sudo dhcpcd 
+#1343349005
+ipcalc 221.137.33.74
+#1343349073
+sudo dhcpcd 
+#1343349078
+ipcalc 221.137.33.74
+#1343349083
+sudo pkill dhcpcd
+#1343349088
+sudo dhcpcd eth0
+#1343349119
+man dhcpcd
+#1343349191
+ip route
+#1343349194
+ip route show
+#1343349197
+ip route show etho1
+#1343349200
+ip route show eth0
+#1343349212
+sudo dhcpcd 
+#1343349275
+gvim
+#1343349299
+mount /dev/sda9 /mnt
+#1343349302
+sudo mount /dev/sda9 /mnt
+#1343349303
+ls
+#1343349307
+cd /mnt]
+#1343349312
+cd /mnt
+#1343349327
+gvim /mnt/boot/grub/grub.cfg 
+#1343349386
+cd /etc/grub.d/
+#1343349386
+ls
+#1343349401
+sudo gvim 30_os-prober 40_custom 
+#1343349436
+sudo gvim 40_custom 
+#1343349530
+arch_grub_update 
+#1343349548
+sudo reboot
+#1343347213
+cd ~/resources/mygit/myarch
+#1343347214
+ls
+#1343347227
+cd goagent/
+#1343347227
+ls
+#1343347229
+cd local/
+#1343347233
+ls
+#1343347243
+dos2unix proxy.py
+#1343347248
+vi proxy.p
+#1343347257
+vi proxy.ini
+#1343347267
+dos2unix proxy.ini
+#1343347272
+vi proxy.ini
+#1343347508
+cd ../server/
+#1343347509
+ls
+#1343347724
+cd ../server/python/
+#1343347725
+ls
+#1343347731
+vi app.yaml
+#1343347746
+dos2unix app.yaml 
+#1343347750
+vi app.yaml
+#1343348011
+ping appengine.google.com
+#1343348023
+ping google.com
+#1343348037
+ping 163.com
+#1343348355
+ping 127.0.0.1
+#1343348359
+ping 127.0.0.2
+#1343348368
+ping 8.8.8.8
+#1343348727
+ping 163.com
+#1343348729
+ping 8.8.8.8
+#1343348750
+ip addr show eth0
+#1343349651
+gvim /etc/grub.d/README 
+#1343349669
+ls/etc/grub.d
+#1343349674
+ll /etc/grub.d
+#1343349717
+sudo gvim /etc/default/grub
+#1343349811
+mount /dev/sda9 /mnt
+#1343349814
+sudo mount /dev/sda9 /mnt
+#1343349824
+sudo gvim /mnt/etc/default/grub
+#1343349920
+arch_grub_update 
+#1343350030
+
+#1343350037
+dhcpcd 
+#1343350044
+sudo dhcpcd 
+#1343350066
+ping 8.8.8.8
+#1343350090
+sudo gvim /mnt/boot/grub/grub.cfg 
+#1343350128
+gvim ~/ubuntu.grub
+#1343350146
+sudo gvim /boot/grub/grub.cfg
+#1343350308
+alias arch_grub_update
+#1343350328
+man grub-mkconfig
+#1343350351
+info grub-mkconfig
+#1343350431
+ll /etc/grub.d
+#1343350488
+sudo gvim /etc/grub.d/41_custom 
+#1343350512
+sudo gvim /etc/grub.d/40_custom 
+#1343350686
+sudo reboot
+#1343351132
+cat dhcpcd 
+#1343351154
+sudo gvim /etc/resolv.conf 
+#1343351601
+cd resources/google_engine/
+#1343351606
+python2.7 appcfg.py update ~/resources/mygit/myarch/goagent/server/python
+#1343351781
+python2.7 appcfg.py rollback
+#1343351896
+python2.7 appcfg.py update ~/resources/mygit/myarch/goagent/server/python
+#1343351937
+ls
+#1343351955
+python2.7 appcfg.py rollback ~/resources/mygit/myarch/goagent/server/python
+#1343352084
+python2.7 appcfg.py update ~/resources/mygit/myarch/goagent/server/python
+#1343352239
+python2.7 appcfg.py update ~/resources/mygit/myarch/goagent/server/pythonq
+#1343352258
+cp ~/resources/mygit/myarch/goagent/ .
+#1343352267
+mv -r ~/resources/mygit/myarch/goagent/ .
+#1343352273
+mv -Rv ~/resources/mygit/myarch/goagent/ .
+#1343352279
+mv  ~/resources/mygit/myarch/goagent/ .
+#1343352294
+python2.7 appcfg.py update goagent/server/python
+#1343353118
+ls
+#1343353126
+cd goagent/
+#1343353126
+ls
+#1343353128
+cd local/
+#1343353135
+python2.7 proxy.py 
+#1343352336
+cat ~/dhcpcd 
+#1343353670
+modprobe ipv6
+#1343353683
+lsmod | grep ip
+#1343353691
+lsmod 
+#1343353708
+modprobe ipv6
+#1343353711
+modprobe ipv63
+#1343353712
+modprobe ipv6
+#1343354095
+cat /etc/sysctl.conf 
+#1343354110
+gvim /etc/sysctl.conf
+#1343354258
+sudo gvim /etc/sysctl.conf
+#1343354283
+ls
+#1343354289
+cd ~
+#1343354299
+sudo gvim /etc/rc.conf
+#1343354571
+j google
+#1343354582
+cd goagent/local/
+#1343354583
+ls
+#1343354599
+python2.7 proxy.py &
+#1343354866
+ifconfig
+#1343355866
+yaourt dhcpcd
+#1343355996
+dhcpcd-gtk
+#1343356048
+manswitch dhcpcd -s
+#1343356222
+ping 127.0.0.1
+#1343356232
+ping 8.8.8.8
+#1343357152
+sudo reboot
+#1343358183
+sudo gvim /etc/sysctl.
+#1343358189
+sudo gvim /etc/sysctl.conf 
+#1343358276
+man sysctl.conf
+#1343358949
+j loca
+#1343358950
+ls
+#1343358963
+python2.7 proxy.py
+#1343359634
+man dhclient
+#1343359639
+dhclient
+#1343359670
+sudo dhclient
+#1343359700
+yaourt dhclient
+#1343359718
+man dhclient
+#1343359738
+dhclient
+#1343359741
+sudo dhclient
+#1343359753
+ping 163.com
+#1343359773
+ip addr show dev eth0
+#1343359784
+ipconfig
+#1343359796
+ifconfig 
+#1343359833
+sudo gvim /etc/rc.conf
+#1343359873
+sudo reboot
+#1343361521
+dhcpcd -q -s 221.137.33.74
+#1343361540
+cat /etc/conf.d/dhcpcd 
+#1343364562
+exit
+#1343360800
+j local
+#1343360808
+python2.7 proxy.py
+#1343364815
+sudo pacman zsh
+#1343364832
+sudo pacman -S zsh
+#1343364849
+zsh
+#1343364877
+man zsh
+#1343365349
+ls /etc/sysctl.d/
+#1343365370
+sudo gvim  /etc/sysctl.d/ipv6.conf
+#1343365737
+j local
+#1343365743
+python2.7 proxy.py
+#1343365798
+gs-ubuntu 
+#1343366500
+dhcpcd
+#1343366507
+sudo dhcpcd
+#1343366528
+ping 163.com
+#1343366542
+ping 8.8.8.8 
+#1343366569
+gvim /etc/dhcpcd.conf 
+#1343366623
+sudo gvim /etc/dhcpcd.conf 
+#1343366655
+sudo dhcpcd
+#1343366661
+dhcpcd -k
+#1343366663
+sudo dhcpcd -k
+#1343366670
+dhcpcd eth0
+#1343366673
+sudo dhcpcd eth0
+#1343366689
+ping 163.com
+#1343366697
+ping 8.8.8.8
+#1343366757
+sudo dhcpcd eth0
+#1343366761
+sudo dhcpcd -k
+#1343366764
+sudo dhcpcd eth0
+#1343366771
+pkill dhcpcd
+#1343366774
+sudo pkill dhcpcd
+#1343366777
+sudo dhcpcd eth0
+#1343366799
+ping 8.8.8.8
+#1343366840
+ping weibo.com
+#1343366968
+pkill dhcpcd
+#1343366971
+sudo pkill dhcpcd
+#1343366974
+ping 8.8.8.8
+#1343366982
+sudo dhcpcd eth0
+#1343366992
+ls
+#1343367001
+ping 8.8.8.8
+#1343367007
+gvim /etc/dhcpcd.conf 
+#1343368583
+cd ~/resources/mygit/ubuntubooks
+#1343368584
+ls
+#1343368587
+./quickmake.sh 
+#1343368768
+cd ~/res
+#1343368770
+cd ~/resources/
+#1343368770
+ls
+#1343368795
+rm -rf /home/riptide/resources/eclipse
+#1343368813
+rm -rf /home/riptide/resources/oraclejava/
+#1343368861
+cp /home/riptide/resources/mybin/ mybin
+#1343368867
+cp -r /home/riptide/resources/mybin/ mybin
+#1343368870
+cd mybin
+#1343368871
+ls
+#1343368880
+ls mybin
+#1343368883
+ll
+#1343368891
+cd mybin
+#1343368892
+ls
+#1343368894
+ll
+#1343368898
+cd ..
+#1343368899
+ls
+#1343368902
+rm mybin
+#1343368908
+ls
+#1343368910
+ll
+#1343368918
+ls apache_maven/
+#1343368922
+cd ..
+#1343368922
+ls
+#1343369344
+gvim ~/.vimrc
+#1343369366
+gs-ubuntu 
+#1343369373
+gvim ~/.vimrc
+#1343369388
+gs-ubuntu 
+#1343369445
+gvim ~/.vimrc
+#1343369496
+gs-ubuntu
+#1343369515
+gvim /home/matt/resources/mygit/myarch/setbash.sh 
+#1343369841
+gvim /etc/grub.d/30_os-prober 
+#1343369941
+ll /etc/grub.d/
+#1343369957
+cat /etc/grub.d/README 
+#1343370051
+yaourt os-prober
+#1343370070
+sudo pacman -S os-prober
+#1343370162
+sudo gvim /home/matt/ubuntu.grub  /etc/grub.d/40_custom 
+#1343370178
+sudo gvim /home/matt/ubuntu.grub 
+#1343370200
+sudo gvim   /etc/grub.d/40_custom 
+#1343370230
+arch_grub_update 
+#1343370314
+yaourt grub
+#1343370354
+yaourt -S grub2-theme-archlinux
+#1343370405
+sudo gvim /etc/default/grub
+#1343370513
+/boot/grub/themes/starfield/
+#1343370521
+arch_grub_update 
+#1343370571
+gvim  mygit/myarch/install.d/
+#1343370653
+sudo pacman grub
+#1343370659
+sudo pacman -Ss grub
+#1343370693
+sudo pacman -Ss os-probe
+#1343370846
+gvim /etc/default/grub
+#1343370860
+ls /boot/
+#1343370897
+sudo gvim /etc/default/grub
+#1343370958
+cd /boot/grub/themes/starfield/
+#1343370959
+ls
+#1343370983
+cat README 
+#1343371029
+ping 127.0.0.1
+#1343371035
+ping 8.8.8.8
+#1343371045
+ping 163.com
+#1343371094
+sudo gvim /etc/resolv.conf 
+#1343371369
+yaourt -S grub2-theme-archlinux
+#1343371384
+yaourt -S grub2-theme-archlinux --noconform
+#1343371387
+yaourt -S grub2-theme-archlinux --noconfirm
+#1343371463
+cp -r /usr/share/grub/themes/Archlinux /boot/grub/themes/
+#1343371468
+sudo cp -r /usr/share/grub/themes/Archlinux /boot/grub/themes/
+#1343371516
+sudo gvim /etc/default/grub 
+#1343371555
+arch_grub_update 
+#1343371589
+sudo chmod -x /etc/grub.d/30_os-prober 
+#1343371592
+arch_grub_update 
+#1343371600
+sudo reboot
+#1343371673
+ping 163.com
+#1343377368
+ls /boot/
+#1343377409
+rm -rf /boot/grub-leg
+#1343377413
+ls /boot/
+#1343377430
+sudo /boot/grub-legacy/
+#1343377450
+sudo rm -rf /boot/grub-legacy/
+#1343377456
+ls /boot/
+#1343379442
+ping 8.8.8.8.
+#1343379446
+ping 8.8.8.8
+#1343379573
+sudo dhcpcd eth0
+#1343379603
+ping 8.8.8.8
+#1343379702
+sudo dhcpcd -k
+#1343379705
+sudo dhcpcd eth0
+#1343379708
+sudo dhcpcd -k
+#1343379710
+sudo dhcpcd eth0
+#1343379723
+pkill dhcp
+#1343379726
+sudo pkill dhcp
+#1343379730
+sudo dhcpcd eth0
+#1343380188
+ping 127.0.0.1
+#1343380198
+ping 8.8.8.8
+#1343380226
+gvim /etc/rc.conf
+#1343380282
+sudo gvim /etc/rc.conf
+#1343380348
+rc.d restart network
+#1343380354
+sudo rc.d restart network
+#1343380394
+ping 8.8.8.8
+#1343380431
+sudo rc.d stop network
+#1343380446
+dhcpcd eth0
+#1343380449
+sudo dhcpcd eth0
+#1343380560
+dhcpcd -k
+#1343380565
+sudo dhcpcd -k
+#1343380568
+sudo dhcpcd eth0
+#1343380573
+sudo dhcpcd 
+#1343380630
+sudo gvim /etc/dhcpd.conf 
+#1343380673
+ls /etc/dhcp*
+#1343380724
+thunar /etc
+#1343380776
+sudo gvim /etc/sysctl.d/ipv6.conf 
+#1343380789
+sudo dhcpcd
+#1343380793
+sudo dhcpcd -r
+#1343380795
+sudo dhcpcd -k
+#1343380805
+sudo dhcpcd
+#1343380820
+sudo rc.d restart network
+#1343380831
+ping 127.0.0.1
+#1343380838
+ping 8.8.8.8
+#1343380868
+sudo pkill dhcpcd
+#1343380872
+sudo pkill dhcp
+#1343380879
+sudo dhcpcd
+#1343380885
+sudo reboot
+#1343381636
+0
+#1343384382
+la
+#1343384389
+exit
+#1343386025
+vim
+#1343386841
+killall amule
+#1343386845
+amule
+#1343386870
+rm ~/.aMule/muleLock 
+#1343389975
+cat /etc/skel/.bash_profile 
+#1343390217
+sudo pacman -S dia
+#1343390260
+dia
+#1343390270
+dia &
+#1343392003
+cd ~/pic
+#1343392020
+mv /home/riptide/Pictures .
+#1343392022
+ls
+#1343392032
+rm dhcpcd ubuntu.grub 
+#1343392053
+cd Pictures/
+#1343392054
+ls
+#1343392062
+cd Pictures/ |less
+#1343392072
+ls | less
+#1343392080
+thunar .
+#1343392149
+j u__
+#1343392153
+j ubuntu
+#1343392156
+ls
+#1343392182
+pwd
+#1343392185
+cd pics
+#1343392186
+ls
+#1343392187
+pwd
+#1343392254
+thunar
+#1343394484
+exit
+#1343382603
+j loca
+#1343382608
+python2.7 proxy.py
+#1343381731
+j arch
+#1343381732
+ls
+#1343381746
+gvim deprecated.sh
+#1343382120
+gs-ubuntu 
+#1343384403
+j myarch
+#1343384404
+ls
+#1343384409
+j ubuntubook
+#1343384410
+ls
+#1343384415
+cd books/ubuntu/
+#1343384416
+ls
+#1343384433
+gvim -p glossary.rst temp.rst 
+#1343385779
+vim &
+#1343385788
+vim
+#1343391151
+cat /etc/skel/.bash_profile 
+#1343391796
+j ubuntu
+#1343391805
+cd books/ubuntu/pics/
+#1343391805
+ls
+#1343391808
+cd ..
+#1343391809
+ls
+#1343391878
+gvim -p glossary.rst temp.rst cmds.rst 
+#1343392461
+j ubuntu
+#1343392462
+ls
+#1343392467
+./quickmake.sh 
+#1343394161
+cp ~/Desktop/bash_flow.png books/ubuntu/pics/
+#1343394590
+cp ~/Desktop/bash_flow.png books/ubuntu/pics/cd ..
+#1343394591
+..
+#1343394596
+ls
+#1343394600
+cd ubuntubooks
+#1343394606
+./quickmake.sh 
+#1343395479
+lr
+#1343395482
+0
+#1343398425
+gvim sedtest.txt
+#1343398570
+sed  "s/^douban\.*/ # &/ "
+#1343398588
+sed  "s/^douban\.*/ # &/ " ~/sedtest.txt
+#1343398606
+mv sedtest.txt ~/
+#1343398608
+sed  "s/^douban\.*/ # &/ " ~/sedtest.txt
+#1343398617
+sed  "s/^douban\.*/ #&/ " ~/sedtest.txt
+#1343399816
+gvim /home/matt/sedtest.txt 
+#1343399859
+sed  "s/^MODULE=\[^\)\]\.*/ #&/ " ~/sedtest.txt
+#1343399879
+sed  "s/^MODULE=\[^\)\]\.*/ & ss/ " ~/sedtest.txt
+#1343399895
+sed -e  "s/^MODULE=\[^\)\]\.*/ & ss/ " ~/sedtest.txt
+#1343399909
+sed -e  "s/^MODULE=\[^\)\]*/ & ss/ " ~/sedtest.txt
+#1343399915
+sed  "s/^MODULE=\[^\)\]*/ & ss/ " ~/sedtest.txt
+#1343399936
+sed  "s/^MODULE=\[^\)\]*//" ~/sedtest.txt
+#1343399941
+sed  "s/^MODULE=\[^)\]*//" ~/sedtest.txt
+#1343399952
+sed  "s/^MODULE=\[^)\]*/&#/" ~/sedtest.txt
+#1343399962
+sed  "s/^MODULE=\(\[^)\]*/&#/" ~/sedtest.txt
+#1343399967
+sed  "s/^MODULE=(\[^)\]*/&#/" ~/sedtest.txt
+#1343399975
+sed  "s/^MODULE=(\[^)\]*/111/" ~/sedtest.txt
+#1343399982
+sed  "s/^MODULE=(\[^)\]*)/111/" ~/sedtest.txt
+#1343399992
+sed  "s/^MODULE\=\(\[^)\]*)/111/" ~/sedtest.txt
+#1343399996
+sed  "s/^MODULE\=\(\[^)\]*\)/111/" ~/sedtest.txt
+#1343400016
+sed  "s/^MODULE=(xbox)/111/" ~/sedtest.txt
+#1343400046
+sed  "s/^MODULE=(\[^(\]*/111/" ~/sedtest.txt
+#1343400055
+sed  "s/^MODULE=(\[^(\]*/11132/" ~/sedtest.txt
+#1343400072
+sed  "s/^MODULE=(\[^)\]*/11132/" ~/sedtest.txt
+#1343400084
+sed  "s/^MODULE=(\[a-b]*/11132/" ~/sedtest.txt
+#1343400106
+sed  "s/^MODULE=(\vbox*/11132/" ~/sedtest.txt
+#1343400110
+sed  "s/^MODULE=(\xbox*/11132/" ~/sedtest.txt
+#1343400119
+sed  "s/^MODULE=(\xbox*$/11132/" ~/sedtest.txt
+#1343400130
+sed  "s/^MODULE=(\xbox)$/11132/" ~/sedtest.txt
+#1343400134
+sed  "s/^MODULE=(xbox)$/11132/" ~/sedtest.txt
+#1343400139
+sed  "s/^MODULE=(xbox$/11132/" ~/sedtest.txt
+#1343400143
+sed  "s/^MODULE=(xbox/11132/" ~/sedtest.txt
+#1343400157
+sed  "s/^MODULE=(xbox/ dbus)/" ~/sedtest.txt
+#1343400178
+sed  "s/^MODULE=(xbox/&  dbus)/" ~/sedtest.txt
+#1343400190
+sed  "s/^MODULE=(xbox/&  dbus/" ~/sedtest.txt
+#1343400200
+sed  "s/^MODULE=(xbox/&/" ~/sedtest.txt
+#1343400204
+sed  "s/^MODULE=(xbox/& 1/" ~/sedtest.txt
+#1343400226
+sed  "s/^MODULE=([a-b]*/& /" ~/sedtest.txt
+#1343400232
+sed  "s/^MODULE=([a-b]*/&/" ~/sedtest.txt
+#1343400237
+sed  "s/^MODULE=([a-b]*/123/" ~/sedtest.txt
+#1343400250
+sed  "s/^MODULE=([a-b]*//" ~/sedtest.txt
+#1343400267
+sed  "s/^MODULE=([^)]*//" ~/sedtest.txt
+#1343400277
+sed  "s/^MODULE=([^)]*/& dbus/" ~/sedtest.txt
+#1343400363
+sed  "s/^MODULE=([^)]*//" ~/sedtest.txt
+#1343400382
+sed  "s/^MODULE=([^)]*/)/" ~/sedtest.txt
+#1343400390
+sed  "s/^MODULE=([^)]*//" ~/sedtest.txt
+#1343400407
+sed  "s/^MODULE=([^)]*/&vbox/" ~/sedtest.txt
+#1343400537
+sed  "s/^MODULES=([^)]*/&vboxdrv/" ~/sedtest.txt
+#1343400558
+cat ~/sedtest.txt 
+#1343400580
+sed  "s/^MODULES=([^)]*/&vboxdrv/" ~/sedtest.txt
+#1343400672
+sed  "s/^MODULES=([^)]*/&vboxdrv/ ; s/^DAEMONS=([^)]*/& dbus slim/" ~/sedtest.txt 
+#1343400958
+sed  "/^MODULES=/a xxx" ~/sedtest.txt
+#1343400964
+sed  "/^MO2DULES=/a xxx" ~/sedtest.txt
+#1343400970
+sed  "/^MODULES=/a xxx" ~/sedtest.txt
+#1343403986
+sudo umount -l /mnt
+#1343404000
+sudo mount /dev/sdb2 /mnt
+#1343404007
+du /mnt
+#1343404012
+sudo du /mnt
+#1343404018
+cd /mnt
+#1343404018
+ls
+#1343404035
+cp ~/Desktop/archlinux-2012.07.15-netinstall-dual.iso  .
+#1343404039
+sudo cp ~/Desktop/archlinux-2012.07.15-netinstall-dual.iso  .
+#1343404085
+reboot
+#1343404089
+9
+#1343404091
+reboot
+#1343395623
+ls
+#1343395691
+0
+#1343395696
+9
+#1343395697
+lr
+#1343395703
+la
+#1343395707
+lz
+#1343395731
+pacs colordiff
+#1343395754
+pac colordiff
+#1343395778
+j myarch
+#1343395781
+gvim install.d/installarch.rst 
+#1343395876
+update
+#1343395902
+sudo sudo ls
+#1343396155
+manswitch du -c
+#1343396169
+du ~/Pictures/
+#1343396177
+du2 ~/Pictures/
+#1343396219
+mkdir2 /tmp/1
+#1343396266
+du1
+#1343396273
+du1 ~/Pictures/
+#1343396285
+du ~/Pictures/
+#1343396310
+cd -
+#1343396314
+la
+#1343396316
+lm
+#1343396342
+ls_d
+#1343396353
+9
+#1343396355
+ls_d
+#1343396393
+9
+#1343396395
+ls_d
+#1343396412
+ls_d --color=auto 
+#1343396423
+lx
+#1343396428
+lz
+#1343396434
+lt
+#1343396442
+ll
+#1343396464
+sh -c "ls"
+#1343396817
+la
+#1343396821
+cd ~
+#1343396822
+la
+#1343397016
+history2
+#1343397021
+history
+#1343400421
+gvim /etc/rc.conf
+#1343400735
+gvim /home/matt/resources/mygit/myarch/install.d/installarch.rst 
+#1343403507
+sudo mount /dev/sdb1 /mnt
+#1343403520
+ls /mnt
+#1343403521
+ls
+#1343403534
+cd /mnt
+#1343403535
+ls
+#1343403563
+sudo cp /boot/grub/grub.cfg arch_grub.cfg 
+#1343403572
+ll
+#1343403592
+cd boot/grub
+#1343403593
+ls
+#1343403610
+sudo gvim grub.cfg 
+#1343395557
+echo $UID
+#1343395564
+su -
+#1343395579
+passwd root
+#1343395598
+su -
+#1343430962
+ls /etc/s*
+#1343430972
+ls_d /etc/s*
+#1343430992
+sudo gvim/etc/slim.conf
+#1343431001
+sudo gvim /etc/slim.conf
+#1343431910
+gvim /home/matt/resources/mygit/myarch/install.d/installarch.rst 
+#1343431921
+gvim sedtest.txt 
+#1343433069
+mount /etc/sdb1 /mnt
+#1343433072
+sudo mount /etc/sdb1 /mnt
+#1343433096
+sudo mount /dev/sdb1 /mnt
+#1343433099
+cd /mnt
+#1343433100
+ls
+#1343433109
+sudo gvim /boot/grub/grub.cfg
+#1343433165
+sudo gvim /mnt/boot/grub/grub.cfg
+#1343433987
+sudo mount /dev/sdb1 /mnt
+#1343434006
+sudo gvim /mnt/boot/grub/grub.cfg 
+#1343435341
+cd /home/riptide
+#1343435342
+ls
+#1343435368
+cd D
+#1343435375
+cd Downloads/
+#1343435376
+ls
+#1343435389
+cd FISH321-20120706/
+#1343435390
+ls
+#1343435395
+cd ..
+#1343435400
+nautils
+#1343435404
+thunar .
+#1343435508
+rm -rf *
+#1343435756
+cd ..
+#1343435756
+ls
+#1343435761
+rm Downloads/
+#1343435767
+rmdir Downloads/
+#1343435784
+cp Templates .
+#1343435789
+cp -rv Templates .
+#1343435797
+cp -rfv Templates .
+#1343435803
+cp -rfv Templates/* .
+#1343435812
+ls
+#1343435815
+cd ~
+#1343435816
+ls
+#1343435824
+cd -
+#1343435825
+ls
+#1343435831
+ls Templates/
+#1343435842
+mv  Templates/ ~
+#1343435845
+ls
+#1343435854
+cd Videos/
+#1343435855
+ls
+#1343435858
+cd ..
+#1343435863
+rm Videos/
+#1343435867
+rmdir Videos/
+#1343435882
+ls Music
+#1343435886
+rm usic
+#1343435890
+rmdir usic
+#1343435895
+rmdir Music
+#1343435905
+mv git ~
+#1343435907
+ls
+#1343435911
+rm pomodairo-1.1.db 
+#1343435931
+cat xfce.txt
+#1343435954
+ls
+#1343435959
+rm xfce.txt 
+#1343435967
+cat rec.txt
+#1343435979
+cat ip.txt
+#1343435985
+rm ip.txt
+#1343435986
+ls
+#1343435994
+ls livecd
+#1343436001
+rm bash.sh
+#1343436008
+ls 桌面
+#1343436017
+rm -rf 桌面
+#1343436018
+ls
+#1343436026
+ls ~/workspaces/
+#1343436032
+ls workspaces/
+#1343436040
+cd tmp
+#1343436041
+ls
+#1343436049
+cd ..
+#1343436050
+ls
+#1343436059
+rm -rf tmp
+#1343436062
+sudo rm -rf tmp
+#1343436068
+df -h
+#1343436087
+exit
+#1343437595
+sudo /dev/sdb2 /mnt
+#1343437601
+sudo /dev/sdb1 /mnt
+#1343437613
+
+#1343437636
+sudo mount /dev/sdb1 /mnt
+#1343437652
+sudo gvim /mnt/boot/grub/grub.cfg
+#1343441960
+exit
