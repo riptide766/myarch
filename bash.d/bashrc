@@ -13,8 +13,15 @@ HISTCONTROL=ignoreboth
 shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=10000
-HISTFILESIZE=20000
+HISTSIZE=1000
+HISTFILESIZE=3000
+#HISTFILE=
+HISTCONTROL="ignoredups"
+HISTIGNORE="j:pwd:ls:cd:history"
+HISTTIMEFORMAT="%F %T "
+
+# others
+EDITOR="gvim"
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -83,9 +90,9 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # some more ls aliases
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
+#alias ll='ls -alF'
+#alias la='ls -A'
+#alias l='ls -CF'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert

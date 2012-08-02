@@ -37,23 +37,6 @@
 #keystate_capslock = enable
 #keystate_scrolllock= enable
 
-"xbindkeys_show" 
-  control+shift + q
-
-"jump_or_exec.sh gvim"
-	Mod4 + 1
-
-"jump_or_exec.sh firefox"
-	Mod4 + 3
-    
-"jump_or_exec.sh terminator"
-	Mod4 + 2
-    
-"jump_or_exec.sh thunar"
-	Mod4 + 4
-
-#"jump_or_exec.sh nautilus"
-#	Mod4 + 4
 
 "movewindow.sh -fs"
 	Control+Alt+Mod2 + KP_Enter
@@ -70,7 +53,28 @@
 "movewindow.sh -l"
 	Mod4 + Left
 
+"switchwindow.sh"
+	Alt + grave
+	
 
 ##################################
 # End of xbindkeys configuration #
 ##################################
+
+# added by jump_or_exec
+"jump_or_exec.sh -e thunar"
+	Mod4 + 4
+
+"jump_or_exec.sh -e firefox"
+	Mod4 + 3
+
+"jump_or_exec.sh -e gvim"
+	Mod4 + 2
+
+"jump_or_exec.sh -e terminator"
+	Mod4 + 1
+
+"jump_or_exec.sh -e eclipse"
+	Mod4 + 5
+
+# added by jump_or_exec

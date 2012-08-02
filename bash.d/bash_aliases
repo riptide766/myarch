@@ -1,12 +1,5 @@
 # .bash_aliases
 
-
-export EDITOR="gvim"
-
-# 历配置史
-# 加上时间戳
-export HISTTIMEFORMAT="%F %T "
-
 # 备份库
 export MTMKRES=$HOME/resources
 export MTMKFLEX=/home/riptide/resources/mygit/stuff/bash/flexec.sh
@@ -46,6 +39,8 @@ if [ $UID -ne 0 ]; then
     alias halt='sudo halt'
     alias update='sudo pacman -Su'
     alias netcfg='sudo netcfg2'
+    alias mount='sudo mount'
+    alias umount='sudo umount'
 fi
 
 # modified commands
@@ -114,7 +109,7 @@ alias du2="du -sh "
 alias reibus="ibus-daemon -d -x -r"
 alias getip="ifconfig | grep -E  'inet\ 地址|inet\ addr' | cut -d ':' -f2 | cut -d ' ' -f1"
 alias syncdate="sudo ntpdate -u 192.43.244.18"
-
+alias demsgc="dmesg -T|sed -e 's|\(^.*'`date +%Y`']\)\(.*\)|\x1b[0;34m\1\x1b[0m - \2|g'"
 manswitch () { man $1 | less -p "^ +$2"; } 
 
 # grub2
