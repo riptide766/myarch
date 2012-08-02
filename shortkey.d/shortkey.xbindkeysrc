@@ -57,10 +57,6 @@
 "movewindow.sh -l"
 	Mod4 + Left
 
-"switchwindow.sh"
-	Alt + grave
-	
-
 ##################################
 # End of xbindkeys configuration #
 ##################################
@@ -80,5 +76,8 @@
 
 "jump_or_exec.sh -e eclipse"
 	Mod4 + 4
+
+"jump_or_exec.sh -S"
+	Alt + grave
 
 # added by jump_or_exec
