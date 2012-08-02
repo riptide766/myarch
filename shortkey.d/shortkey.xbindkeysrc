@@ -33,6 +33,10 @@
 # NumLock, CapsLock and ScrollLock.
 # Uncomment the lines above if you want to pay attention to them.
 
+
+"xbindkeys_show" 
+  control+shift + q
+
 #keystate_numlock = enable
 #keystate_capslock = enable
 #keystate_scrolllock= enable
@@ -63,7 +67,7 @@
 
 # added by jump_or_exec
 "jump_or_exec.sh -e thunar"
-	Mod4 + 4
+	Mod4 + 5
 
 "jump_or_exec.sh -e firefox"
 	Mod4 + 3
@@ -75,6 +79,6 @@
 	Mod4 + 1
 
 "jump_or_exec.sh -e eclipse"
-	Mod4 + 5
+	Mod4 + 4
 
 # added by jump_or_exec

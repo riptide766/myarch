@@ -16,13 +16,27 @@ declare -A mapping=(
 	[terminator]="terminator.Terminator|terminator" 
 	[gvim]="gvim.Gvim|gvim -f"
 	[firefox]="navigator.Firefox|firefox"
-	[thunar]="Thunar.Thunar|thunar"
 	[eclipse]="eclipse.Eclipse|/home/matt/resources/eclipse/eclipse"
+	[thunar]="Thunar.Thunar|thunar"
 )
 
 tagstr="# added by jump_or_exec"
 
 config_file=$(readlink -m "/home/`whoami`/.xbindkeysrc")
+
+clear_oldsetting(){
+	grep -q "$tagstr" $config_file || return
+	range=`grep -n "^$tagstr" $config_file | awk -F: '{ a[NR]=$1 } END {b=a[1]","a[2]; print b}' `d
+	sed -i "$range" $config_file
+}
+
+get_pos(){
+  grep -E "\[$1\]" -n $0 | cut -d":" -f 1
+}
+
+get_base(){
+  grep -E "$1" -n $0 | cut -d":" -f 1
+}
 
 setting(){
 	local base=`get_base "^declare"`
@@ -36,22 +50,7 @@ setting(){
 	killall -HUP xbindkeys
 }
 
-clear_oldsetting(){
-	grep -q "$tagstr" $config_file || return
-	range=`grep -n "^$tagstr" $config_file | awk -F: '{ a[NR]=$1 } END {b=a[1]","a[2]; print b}' `
-	range="$range"d
-	sed -i "$range" $config_file
-}
-
-get_pos(){
-  grep -E "\[$1\]" -n $0 | cut -d":" -f 1
-}
-
-get_base(){
-  grep -E "$1" -n $0 | cut -d":" -f 1
-}
-
-execute(){
+execution(){
 	entry=${mapping[$1]} 
 	wmctrl -a ${entry%\|*} -x || exec ${entry#*\|} &
 }
@@ -76,7 +75,7 @@ while getopts she: opt ; do
 			echo done...
 			;;
 		e) 
-			execute $OPTARG
+			execution $OPTARG
 			;;
 		h|*)
 			usage
