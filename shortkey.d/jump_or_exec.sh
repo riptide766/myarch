@@ -23,8 +23,22 @@ declare -A mapping=(
 )
 
 switchkey="Alt + grave"
+
+declare -A gridkeys=(
+	[lt]=q
+	[lt]=w
+	[lt]=e
+	[lt]=a
+	[lt]=s
+	[lt]=d
+	[lt]=c
+	[lt]=x
+	[lt]=z
+)
 	
 tagstr="# added by jump_or_exec"
+
+#username="grep $UID /etc/passwd | cut -d"' -f 1"
 
 config_file=$(readlink -m "/home/`whoami`/.xbindkeysrc")
 
@@ -74,6 +88,27 @@ switch_same_app(){
 	wmctrl -i -a $twid
 }
 
+
+install_software()
+{
+
+	[[ `which $1  2>/dev/null `  ]] &&  return || pacman -S $1
+
+}
+
+install_tools()
+{
+
+
+	install_software wmctrl && install_software xbindkeys
+
+	ls $config_file
+
+	[[  -a $config_file ]] && echo exist || echo failed
+
+	
+}
+
 usage(){
 cat <<EOF
 
@@ -87,12 +122,12 @@ cat <<EOF
 EOF
 }
 
-if [[ -z $1 || $1 = @(-h|--help) ]]; then
-  usage
-  exit $(( $# ? 0 : 1 ))
-fi
+#if [[ -z $1 || $1 = @(-h|--help) ]]; then
+  #usage
+  #exit $(( $# ? 0 : 1 ))
+#fi
 
-while getopts sShe: opt ; do
+while getopts :sShim:e: opt ; do
 	case $opt in
 		s) 
 			setting
@@ -101,10 +136,18 @@ while getopts sShe: opt ; do
 		S) 
 			switch_same_app
 			;;
+		i) 
+			install_tools	
+			;;
 		e) 
 			execution $OPTARG
 			;;
-		h|*)
+		:)
+			echo xxxx
+			;;
+
+		?)
+			echo yyyy
 			usage
 			;;
 	esac

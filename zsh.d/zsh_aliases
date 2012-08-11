@@ -1,35 +1,6 @@
 # .bash_aliases
 
-# 备份库
-export MTMKRES=$HOME/resources
-export MTMKFLEX=/home/matt/resources/mygit/stuff/bash/flexec.sh
-
-
-# 英语帮助
-#export MANPATH="/usr/share/man"
-#alias eman='man -M /usr/share/man'
-
-# maven
-export M2_HOME=$MTMKRES/mybin/maven
-export PATH=$M2_HOME/bin:$PATH
-
-# jdk
-export JAVA_HOME=$MTMKRES/oraclejava/jdk1.7.0_02
-export CLASSPATH=.:$JAVA_HOME/lib
-export PATH=$JAVA_HOME/bin:$PATH
-
-
-# autojump
-source ~/.autojump/etc/profile.d/autojump.zsh
-#source /etc/profile.d/autojump.bash
-
-
-# nodejs
-export NODE_PATH=/usr/local/lib/node_modules
-
-# 日常维护
-# source $MTMKRES/mygit/maintainance/maintainance_completion.sh
-
+alias -g FLEX=". $MTMKFLEX "
 
 # privileged access
 if [ $UID -ne 0 ]; then
@@ -54,6 +25,7 @@ alias df='df -h'
 alias du='du -c -h'
 alias mkdir='mkdir -p -v'
 alias ping='ping -c 5'
+alias vi="vim "
 
 # new commands
 alias da='date "+%A, %B %d, %Y [%T]"'
@@ -85,9 +57,9 @@ alias chgrp='chgrp --preserve-root'
 alias del='mv -t ~/.local/share/Trash/files --backup=t'
 alias of="xdg-open "
 alias ls_d="\ls -1d */"
-alias mv2soft=". $MTMKFLEX  'mv %1 ~/resources/softwave/'"
-alias mv2doc=". $MTMKFLEX  'mv %1 ~/Documents/'"
-alias mv2desk=". $MTMKFLEX  'mv %1 ~/Desktop/'"
+alias mv2soft="FLEX  'mv %1 ~/resources/softwave/'"
+alias mv2doc="FLEX  'mv %1 ~/Documents/'"
+alias mv2desk="FLEX  'mv %1 ~/Desktop/' "
 
 # kits
 alias ..="cd .."
@@ -97,16 +69,13 @@ alias ccal='cal $(date +%m\ %Y)'
 alias lookpath='echo $PATH | tr ":" "\n"'
 alias watchprocess='watch "ps -eo pcpu,user,pid,cmd --sort -pcpu | head -6 "'
 alias cshort='gnome-desktop-item-edit --create-new ~/Desktop'
-alias 9="source ~/.bash_aliases;echo done"
-alias xx="quicktar"
-alias n="nautilus . "
-alias zs="~/bin/look_script_annotation"
-alias h=". $MTMKFLEX '%1 --help | less'"
-alias ssh2=". $MTMKFLEX  'ssh -p %1 -qTfnN -D 7070 %2 '"
-alias nohup2=". $MTMKFLEX 'nohup %1 > /dev/null 2>&1 & '"
-alias xyy="nohup2 'wine ~/.wine/drive_c/freegate/FreeU21.exe'"
-alias xsel2=". $MTMKFLEX  ' %1 | xsel -b ' "
-alias mkdir2=". $MTMKFLEX 'mkdir -pv %1 && cd %1'"
+alias 9="source ~/.zsh_aliases;echo done"
+alias n="thunar . "
+alias h="FLEX '%1 --help | less'"
+alias ssh2="FLEX  'ssh -p %1 -qTfnN -D 7070 %2 '" # ssh翻墙
+alias nohup2="FLEX 'nohup %1 > /dev/null 2>&1 & '" # 独立进程
+alias xsel2="FLEX  ' %1 | xsel -b ' "
+alias mkdir2="FLEX 'mkdir -pv %1 && cd %1'" #创建并进入该目录
 alias mkdir3="mkdir -pv %1 "
 alias du2="du -sh "
 alias reibus="ibus-daemon -d -x -r"
@@ -122,10 +91,11 @@ alias arch_grub_update="sudo GRUB_PREFIX="/boot/grub" grub-mkconfig -o /boot/gru
 # gvim
 alias gvimp="gvim -f -p "
 alias 8="gvim -f ~/.vimrc &"
-alias gs="gvim -S ~/resources/"
+alias gs="gvim -S "
 alias gf='gvim --remote-silent-tab $1'
-alias 0="gvim -f ~/.bash_aliases;echo done &"
-alias gs-ubuntu="gvim -S ~/resources/ubuntu.vim &"
+alias 0="gvim -f ~/.zsh_aliases;echo done &"
+alias gs-ubuntu="gvim -f -S ~/resources/ubuntu.vim &"
+alias gs-ctrlctrl="gvim -f -S ~/resources/ctrlctrl.vim & "
 
 # history
 alias searchistory="history | grep "
@@ -146,7 +116,7 @@ alias paco="pacman -Qo"    # '[o]wner'          - determine which package owns a
 alias pacf="pacman -Ql"    # '[f]iles'          - list all files installed by a given package
 alias pacc="pacman -Sc"    # '[c]lean cache'    - delete all not currently installed package files
 alias pacm="makepkg -fci"  # '[m]ake'           - make package from PKGBUILD file in current directory
-alias pacw="pacman -Sw"   # 'do[w]nload        - download packages only
+alias pacw="pacman -Sw"    # 'don[w]load'       - download packages only
 
 
 # aptitude

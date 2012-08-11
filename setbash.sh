@@ -8,6 +8,12 @@ do
 	ln -sfv `pwd`/bash.d/$file ~/\.$file
 done
 
+echo "链接zsh环境文件"
+for file in `ls zsh.d`;
+do
+	ln -sfv `pwd`/zsh.d/$file ~/\.$file
+done
+
 
 echo "链接脚本到～/bin目录"
 mkdir -pv ~/bin

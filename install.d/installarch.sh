@@ -47,7 +47,7 @@ _install_grub2()
 {
 
 # 安装配置grub2
-sudo pacman -S os-prober grub-bios --noconfirm
+pacman -S os-prober grub-bios --noconfirm
 yaourt -S grub2-theme-archlinux --noconfirm
 yaourt -S grub2-theme-archxion --noconfirm
 sudo grub-install --boot-directory=/boot --no-floppy --recheck --debug $_bootloader_dev
@@ -59,27 +59,28 @@ _install_software()
 {
 
 # fonts
-pacman -S wqy-bitmapfont wqy-zenhei ttf-dejavu ttf-arphic-ukai ttf-arphic-uming ttf-fireflysung xkill rsync --noconfirm
-sudo yaourt -S ttf-ms-fonts-zh_cn  --noconfirm
-sudo yaourt -S tf-ms-fonts --noconfirm
+sudo pacman -S wqy-bitmapfont wqy-zenhei ttf-dejavu ttf-arphic-ukai ttf-arphic-uming ttf-fireflysung rsync --noconfirm
 sudo yaourt -S ttf-microsoft-yahei --noconfirm
+#yaourt -S ttf-ms-fonts-zh_cn  --noconfirm
+#yaourt -S ttf-ms-fonts --noconfirm
+yaourt -S im-switch --noconfirm
 
 # popular software
-pacman -S transmission-gtk ibus-anthy ibus-pinyin virtualbox virtualbox-source virtualbox-modules wmctrl xbindkeys ntfs-3g p7zip unrar unzip chmsee epdfview stellarium openjdk6 freemind amule smplayer ristretto transmission-gtk firefox flashplugin terminator bash-completion scrot colordiff --noconfirm
+sudo pacman -S zenity fcitx transmission-gtk gvfs ntp ibus-anthy ibus-pinyin virtualbox virtualbox-source virtualbox-modules wmctrl xbindkeys ntfs-3g p7zip unrar unzip chmsee epdfview stellarium openjdk6 freemind amule smplayer ristretto transmission-gtk firefox flashplugin terminator bash-completion scrot colordiff --noconfirm
 
-# sudo yaourt -S ntpdate --noconfirm
-# sudo yaourt -S pysdm --noconfirm
 
 # others
-sudo pacman -S git gvim python-sphinx openssh tree qgit subversion dia --noconfirm
+sudo pacman -S git gvim python-sphinx openssh tree qgit subversion dia arch-install-scripts xsel --noconfirm
 
+# office
+sudo pacman -S graphite  hsqldb-java hyphen icu  libidl2  libreoffice-zh-CN libwpd  libwps lpsolve orbit2  raptor  rasqal redland  libreoffice-base libreoffice-calc  libreoffice-common libreoffice-draw  libreoffice-writer
 }
 
 # setting alsa
 _config_alsa()
 {
 
-/etc/modprobe.d
+mkdir -pv /etc/modprobe.d
 grep -q -e "^option snd-NAME-OF-MODULE" $_modprobe_conf || echo "options snd-NAME-OF-MODULE ac97_quirk=0" >> $_modprobe_conf
 
 }
@@ -190,3 +191,5 @@ grep -q -e "# %wheel" $_sudoers && sed -i -e "s/#\ \(%wheel\)/\1/" $_sudoers
 gpasswd -a $_username wheel
 
 }
+
+

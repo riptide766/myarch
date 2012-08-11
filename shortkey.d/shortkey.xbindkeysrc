@@ -46,16 +46,16 @@
 	Control+Alt+Mod2 + KP_Enter
 
 "movewindow.sh -rt"
-	Mod4 + Up
+	Mod4 + e
 
 "movewindow.sh -rb"
-	Mod4 + Down
+	Mod4 + c
 
-"movewindow.sh -r"
-	Mod4 + Right
+"movewindow.sh -lt"
+	Mod4 + q
 
-"movewindow.sh -l"
-	Mod4 + Left
+"movewindow.sh -lb"
+	Mod4 + z
 
 ##################################
 # End of xbindkeys configuration #
