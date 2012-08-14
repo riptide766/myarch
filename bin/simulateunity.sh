@@ -8,11 +8,6 @@
 
 ### 配置区开始
 #
-# 映射格式 [shortname]="classname|command"
-# classname可以通过wmctrl -lx查看
-# 数组的顺序决定快捷键的编号. 第一个是super + 1 ；第二个是super + 2 .依次递进
-# 通过 -s 选项应用配置
-#
 
 declare -A mapping=(
 	[terminator]="terminator.Terminator|terminator" 
@@ -25,7 +20,7 @@ declare -A mapping=(
 switchkey="Alt + grave"
 
 declare -A gridkeys=(
-	[lt]="q"
+	[lt]="q" 
 	[t]="w"
 	[rt]="e"
 	[l]="a"
@@ -41,6 +36,7 @@ declare -A gridkeys=(
 
 user=${SUDO_USER:-${USER}}
 user_home=$(getent passwd ${user} | cut -d: -f6)
+group=$(getent group ${user} | cut -d: -f1)
 
 
 tagstr="# added by jump_or_exec"
@@ -56,23 +52,23 @@ clear_oldsetting(){
 
 # 求指定数组key的数据位置
 get_pos(){
-  grep -E "\[$1\]" -n $0 | cut -d":" -f 1
+  grep -E "\[$1\]" -n $0 | head -n 1 | cut -d":" -f 1 
 }
 
 # 求mapping数组的位置
 get_base(){
-  grep -E "$1" -n $0 | cut -d":" -f 1
+	grep -E "$1" -n $0 | cut -d":" -f 1 
 }
 
 setting(){
 	# jump or exec 
-	local base=`get_base "^declare -A mapping"`
+	local base=`get_base "^declare\ \-A\ mapping"`
 	local keys=${!mapping[@]}
 	local cmd=`basename $0` out=
 	for key in $keys; do
 		out+="\"$cmd -e $key\"\n\tMod4 + $(( `get_pos $key` - $base ))\n\n"
 	done
-	out+="\"$cmd -S\"\n\t$switchkey\n\n"
+	out+="\"$cmd -s\"\n\t$switchkey\n\n"
 	
 	# grid
 	for key in ${!gridkeys[@]}; do
@@ -106,7 +102,7 @@ switch_same_app(){
 install_software()
 {
 	[[ `which $1  2>/dev/null `  ]] && {
-		echo $1 已经安装
+		echo $1 已安装
 		return
 	} 
 	[ $UID == 0 ] || { 
@@ -123,11 +119,12 @@ install_tool()
 	install_software xbindkeys || exit 1
 	[[  -a $config_file ]] || {
 		xbindkeys -d > $config_file
+		chown $user:$group $config_file
 		echo 生成默认配置文件
 	}
 	killall xbindkeys >/dev/null 2>&1
 	/usr/bin/nohup xbindkeys > /dev/null 2>&1
-	[ $? == 0 ] && echo "服务以启动" || echo "请手动输入nohup xbindkeys > /dev/null 2>&1 启动服务"
+	[ $? == 0 ] && echo "xbindkeys服务已启动" || echo "请手动输入nohup xbindkeys > /dev/null 2>&1 启动服务"
 	
 }
 
@@ -187,13 +184,45 @@ function MoveWindow ()
 usage(){
 cat <<EOF
 Usage:	commond [optins...]
+-i      安装相关软件
 -s      更新快捷键配置到.xbindkeysrc
 -S      切换到同一种程序的其他窗口
 -e app  切换或打开一个程序窗口	
 -g pos  移动窗口到指定位置
 -h      帮助信息
 
-配置方法见脚本。
+简述
+
+仿ubuntu untiy桌面快捷解
+
+1）切换或打开程序   super + [1-9]
+2）切换相同程序窗口 alt + \`
+3) 九宫格移动窗口   super + [qweasdzxc]      
+
+
+
+配置方法
+
+ 修改脚本头部的数组.
+
+ mapping=(
+	[terminator]="terminator.Terminator|terminator" 
+	[gvim]="gvim.Gvim|gvim -f"
+	[firefox]="navigator.Firefox|firefox"
+	[eclipse]="eclipse.Eclipse|/home/matt/resources/eclipse/eclipse"
+	[thunar]="Thunar.Thunar|thunar"
+)
+
+ 映射格式 [shortname]="classname|command"
+ shortname		软件短名
+ classname		可以通过wmctrl -lx查看
+ comand			软件启动命令
+
+ 数组的顺序决定快捷键的编号. 
+ 第一行是super + 1 
+ 第二个是super + 2 .依次递进
+ 
+ 修改后通过 -S 选项应用配置
 
 EOF
 }
@@ -207,14 +236,14 @@ fi
 
 while getopts :sShig:e: opt ; do
 	case $opt in
-		s) # 更新xbindkeys配置文件以及服务
+		S) # 更新xbindkeys配置文件以及服务
 			setting
-			echo 快捷键配置已更新...
+			echo 快捷键配置已更新
 			;;
 		g) # 当前窗口移动到各种角落
 			grid $OPTARG
 			;;
-		S) # 在相同软件间切换窗口
+		s) # 在相同软件间切换窗口
 			switch_same_app
 			;;
 		i) # 安装依赖软件
