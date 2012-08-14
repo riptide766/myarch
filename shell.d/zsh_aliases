@@ -1,35 +1,10 @@
-# .bash_aliases
+# .zsh_aliases
 
-# 备份库
-export MTMKRES=$HOME/resources
-export MTMKFLEX=/home/matt/resources/mygit/stuff/bash/flexec.sh
-
-
-# 英语帮助
-#export MANPATH="/usr/share/man"
-#alias eman='man -M /usr/share/man'
-
-# maven
-export M2_HOME=$MTMKRES/mybin/maven
-export PATH=$M2_HOME/bin:$PATH
-
-# jdk
-export JAVA_HOME=$MTMKRES/oraclejava/jdk1.7.0_02
-export CLASSPATH=.:$JAVA_HOME/lib
-export PATH=$JAVA_HOME/bin:$PATH
-
-
-# autojump
-source ~/.autojump/etc/profile.d/autojump.zsh
-#source /etc/profile.d/autojump.bash
-
-
-# nodejs
-export NODE_PATH=/usr/local/lib/node_modules
-
-# 日常维护
-# source $MTMKRES/mygit/maintainance/maintainance_completion.sh
-
+alias -g H='| head'
+alias -g T='| tail'
+alias -g G='| grep'
+alias -g L="| less"
+alias -g HL="--help"
 
 # privileged access
 if [ $UID -ne 0 ]; then
@@ -54,6 +29,7 @@ alias df='df -h'
 alias du='du -c -h'
 alias mkdir='mkdir -p -v'
 alias ping='ping -c 5'
+alias vi="vim "
 
 # new commands
 alias da='date "+%A, %B %d, %Y [%T]"'
@@ -82,14 +58,17 @@ alias chmod='chmod --preserve-root'
 alias chgrp='chgrp --preserve-root'
 
 # 文件和目录
-alias del='mv -t ~/.local/share/Trash/files --backup=t'
 alias of="xdg-open "
 alias ls_d="\ls -1d */"
-alias mv2soft=". $MTMKFLEX  'mv %1 ~/resources/softwave/'"
-alias mv2doc=". $MTMKFLEX  'mv %1 ~/Documents/'"
-alias mv2desk=". $MTMKFLEX  'mv %1 ~/Desktop/'"
+alias mv2soft="mv $1 ~/resources/softwave/"
+alias mv2doc="mv $1 ~/Documents/"
+alias mv2desk="mv $1 ~/Desktop/ "
+alias mvto="mkdir -vp $1 && mv -v ${@:2} $1 "
+alias mkdir2="mkdir -pv $1 && cd $1" 
+alias mkdir3="mkdir -pv "
+alias del='mv -t ~/.local/share/Trash/files --backup=t'
 
-# kits
+### kits
 alias ..="cd .."
 alias edit_rc="sudo gvim -f /etc/rc.conf &"
 alias rexbingkeys='killall -HUP xbindkeys'
@@ -97,43 +76,52 @@ alias ccal='cal $(date +%m\ %Y)'
 alias lookpath='echo $PATH | tr ":" "\n"'
 alias watchprocess='watch "ps -eo pcpu,user,pid,cmd --sort -pcpu | head -6 "'
 alias cshort='gnome-desktop-item-edit --create-new ~/Desktop'
-alias 9="source ~/.bash_aliases;echo done"
-alias xx="quicktar"
-alias n="nautilus . "
-alias zs="~/bin/look_script_annotation"
-alias h=". $MTMKFLEX '%1 --help | less'"
-alias ssh2=". $MTMKFLEX  'ssh -p %1 -qTfnN -D 7070 %2 '"
-alias nohup2=". $MTMKFLEX 'nohup %1 > /dev/null 2>&1 & '"
-alias xyy="nohup2 'wine ~/.wine/drive_c/freegate/FreeU21.exe'"
-alias xsel2=". $MTMKFLEX  ' %1 | xsel -b ' "
-alias mkdir2=". $MTMKFLEX 'mkdir -pv %1 && cd %1'"
-alias mkdir3="mkdir -pv %1 "
+alias n="thunar . "
+alias h="%1 --help | less"
+alias ssh2="ssh -p $1 -qTfnN -D 7070 $2 " # ssh翻墙
+alias nohup2="nohup $1 > /dev/null 2>&1 & " # 独立进程
+alias xsel2=" $1 | xsel -b "
 alias du2="du -sh "
 alias reibus="ibus-daemon -d -x -r"
 alias getip="ifconfig | grep -E  'inet\ 地址|inet\ addr' | cut -d ':' -f2 | cut -d ' ' -f1"
 alias syncdate="sudo ntpdate -u 192.43.244.18"
 alias demsgc="dmesg -T|sed -e 's|\(^.*'`date +%Y`']\)\(.*\)|\x1b[0;34m\1\x1b[0m - \2|g'"
-manswitch () { man $1 | less -p "^ +$2"; } 
+alias manswitch='man $1 | less -p "^ +$2" '
 
-# grub2
+### grub2
+
 alias arch_grub_install="grub-install --boot-directory=/boot --no-floppy --recheck --debug "
 alias arch_grub_update="sudo GRUB_PREFIX="/boot/grub" grub-mkconfig -o /boot/grub/grub.cfg"
 
-# gvim
-alias gvimp="gvim -f -p "
-alias 8="gvim -f ~/.vimrc &"
-alias gs="gvim -S ~/resources/"
-alias gf='gvim --remote-silent-tab $1'
-alias 0="gvim -f ~/.bash_aliases;echo done &"
-alias gs-ubuntu="gvim -S ~/resources/ubuntu.vim &"
 
-# history
+### gvim & edit
+
+alias 8="gvim -f ~/.vimrc &"
+alias 9="source ~/.zsh_aliases;echo done"
+alias 0="gvim ~/.zsh_aliases"
+alias gvimp="gvim -p "
+alias gvimf='gvim --remote-silent-tab $1'
+
+# 打开一个固定目录下的vim会话
+function gvims(){
+	gvim -S "$MTMKRES/$1"
+}
+
+function _compctl_gs () {
+	reply=(`ls -1 $MTMKRES/*vim |cut -d"/" -f 5 | tr "\n" " " `) 
+}
+
+compctl -K _compctl_gs gvims
+
+### history
+
 alias searchistory="history | grep "
 alias history2="history | sed -e 's/\s[0-9\-]\{10\}\s[0-9\:]\{8\}\s//'"
 alias r="fc -s "
 
 
-# pacman aliases (if applicable, replace 'pacman' with your favorite AUR helper)
+### pacman aliases (if applicable, replace 'pacman' with your favorite AUR helper)
+
 alias pac="pacman -S"      # default action     - install one or more packages
 alias pacu="pacman -Syu"   # '[u]pdate'         - upgrade all packages to their newest version
 alias pacs="pacman -Ss"    # '[s]earch'         - search for a package using one or more keywords
@@ -146,17 +134,9 @@ alias paco="pacman -Qo"    # '[o]wner'          - determine which package owns a
 alias pacf="pacman -Ql"    # '[f]iles'          - list all files installed by a given package
 alias pacc="pacman -Sc"    # '[c]lean cache'    - delete all not currently installed package files
 alias pacm="makepkg -fci"  # '[m]ake'           - make package from PKGBUILD file in current directory
-alias pacw="pacman -Sw"   # 'do[w]nload        - download packages only
+alias pacw="pacman -Sw"    # 'don[w]load'       - download packages only
 
-
-# aptitude
-#alias i="sudo apt-get install "
-#alias i="sudo pacman -S "
-#alias s="aptitude search "
-#alias upgrade="sudo aptitude upgrade "
-
-
-# tar
+### tar
 alias tar_delete='tar --delete -f '
 alias tar_list='tar tf '
 alias tar_update='tar uPvf '
@@ -167,4 +147,14 @@ function tar_clear(){
 	rm -rf `tar -tf $1`
 }
 
-
+#7z l -slt freemind-bin-0.9.0.zip | grep Path | cut -d" " -f 3 | sed "1d" | xargs rm -rvf
+#alias -g FLEX=". $MTMKFLEX "
+#alias mv2soft="FLEX  'mv %1 ~/resources/softwave/'"
+#alias mv2doc="FLEX  'mv %1 ~/Documents/'"
+#alias mv2desk="FLEX  'mv %1 ~/Desktop/' "
+#alias mvto="FLEX 'mkdir -vp %1 && mv -v %{@:2} %1' "
+#alias mkdir2="FLEX 'mkdir -pv %1 && cd %1'" #创建并进入该目录
+#alias h="FLEX '%1 --help | less'"
+#alias ssh2="FLEX  'ssh -p %1 -qTfnN -D 7070 %2 '" # ssh翻墙
+#alias nohup2="FLEX 'nohup %1 > /dev/null 2>&1 & '" # 独立进程
+#alias xsel2="FLEX  ' %1 | xsel -b ' "
