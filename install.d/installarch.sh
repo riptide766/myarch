@@ -66,11 +66,11 @@ sudo yaourt -S ttf-microsoft-yahei --noconfirm
 yaourt -S im-switch --noconfirm
 
 # popular software
-sudo pacman -S zenity fcitx transmission-gtk gvfs ntp ibus-anthy ibus-pinyin virtualbox virtualbox-source virtualbox-modules wmctrl xbindkeys ntfs-3g p7zip unrar unzip chmsee epdfview stellarium openjdk6 freemind amule smplayer ristretto transmission-gtk firefox flashplugin terminator bash-completion scrot colordiff --noconfirm
+sudo pacman -S zenity fcitx transmission-gtk gvfs ntp ibus-anthy ibus-pinyin virtualbox virtualbox-sourc:e virtualbox-modules wmctrl xbindkeys ntfs-3g p7zip unrar unzip chmsee epdfview stellarium openjdk6 freemind amule smplayer ristretto transmission-gtk firefox flashplugin terminator bash-completion scrot colordiff --noconfirm
 
 
 # others
-sudo pacman -S git gvim python-sphinx openssh tree qgit subversion dia arch-install-scripts xsel --noconfirm
+sudo pacman -S git ascii ack gvim python-sphinx openssh tree qgit subversion dia arch-install-scripts xsel --noconfirm
 
 # office
 sudo pacman -S graphite  hsqldb-java hyphen icu  libidl2  libreoffice-zh-CN libwpd  libwps lpsolve orbit2  raptor  rasqal redland  libreoffice-base libreoffice-calc  libreoffice-common libreoffice-draw  libreoffice-writer
@@ -192,4 +192,39 @@ gpasswd -a $_username wheel
 
 }
 
+_setting_shell()
+{
+
+local shelldir="shell.d"
+
+echo "链接shell环境文件"
+for file in `ls shell.d`;
+do
+	ln -sfv `pwd`/$shelldir/$file ~/\.$file
+done
+
+
+
+}
+
+_setting_other()
+{
+
+
+echo "链接脚本到～/bin目录"
+mkdir -pv ~/bin
+for file in `ls shortkey.d`;
+do
+	[[ "sh" == ${file#*.} ]] && ln -sfv `pwd`/shortkey.d/$file ~/bin/$file
+done
+ln -sfv `pwd`/shortkey.d/shortkey.xbindkeysrc ~/.xbindkeysrc
+
+
+echo "链接firefox的pentadactyl配置到主目录"
+for file in `ls pentadactyl.d`;
+do
+	ln -sfv `pwd`/pentadactyl.d/$file ~/\.${file#*.}
+done
+
+}
 

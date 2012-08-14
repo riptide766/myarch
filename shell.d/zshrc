@@ -32,12 +32,14 @@ ZSH_THEME="terminalparty"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git archlinux)
+plugins=(git archlinux autojump)
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
+
 source ~/.zsh_aliases
+source ~/bin/aliaswrapper.sh 123
 
 ##在命令前插入 sudo {{{ #定义功能
 sudo-command-line() {
@@ -49,4 +51,7 @@ zle -N sudo-command-line
 #定义快捷键为： [Esc] [Esc]
 bindkey "\e\e" sudo-command-line
 #}}}
+
+# services
+pgrep xbindkeys >/dev/null 2>&1 || xbindkeys
 

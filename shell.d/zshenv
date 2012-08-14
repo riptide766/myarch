@@ -5,11 +5,6 @@ export PATH=$HOME/bin:$PATH
 export MTMKRES=$HOME/resources
 export MTMKFLEX=$MTMKRES/mygit/stuff/bash/flexec.sh
 
-
-# 英语帮助
-#export MANPATH="/usr/share/man"
-#alias eman='man -M /usr/share/man'
-
 # maven
 export M2_HOME=$MTMKRES/mybin/maven
 export PATH=$M2_HOME/bin:$PATH
@@ -19,20 +14,6 @@ export JAVA_HOME=$MTMKRES/oraclejava/jdk1.7.0_02
 export CLASSPATH=.:$JAVA_HOME/lib
 export PATH=$JAVA_HOME/bin:$PATH
 
-
-# autojump
-#source ~/.autojump/etc/profile.d/autojump.zsh
-source /etc/profile.d/autojump.zsh
-#source ~/.autojump/etc/profile.d/autojump.zsh
-
 # nodejs
 # export NODE_PATH=/usr/local/lib/node_modules
-
-# 日常维护
-# source $MTMKRES/mygit/maintainance/maintainance_completion.sh
-
-
-# services
-pgrep xbindkeys >/dev/null 2>&1 || xbindkeys
-
 
