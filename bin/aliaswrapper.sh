@@ -16,8 +16,8 @@ _wrapalias_shell="zsh"
 
 alias_file=`readlink -m $HOME/.${_wrapalias_shell}_aliases`
 
-sed 's/\(\s*alias\s*.*\)\(\s*#.*\)/\1/' $alias_file | grep -e "^\s*alias" | grep -e "\$[1-9]" | sed 's/\(alias\ \)\(.*\)=[\x27\x22]\(.*\)[\x27\x22]\s*$/function \2 () { \3 }/' | while read -r func ; do 
-	#[ $1 ] && echo $func
+sed 's/\(\s*alias\s*.*\)\(\s*#.*\)/\1/' $alias_file | grep -e "^\s*alias" | grep -e "\$[1-9\*]" | sed 's/\(alias\ \)\([\_a-zA-Z0-9]*\)=[\x27\x22]\(.*\)[\x27\x22]\s*$/function \2 () { \3 }/' | while read -r func ; do 
+	[ $1 ] && echo $func
 	unalias `echo $func | cut -d" " -f2`
 	eval "$func"
 done

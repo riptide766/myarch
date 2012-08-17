@@ -1,5 +1,7 @@
 export LANG="en_US.UTF-8"
 export PATH=$HOME/bin:$PATH
+export EDITOR=vim
+export TMPDIR="$HOME/myaourt"
 
 # 备份库
 export MTMKRES=$HOME/resources

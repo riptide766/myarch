@@ -1,4 +1,6 @@
 
+#alias del='mv -t ~/.local/share/Trash/files --backup=t'
+#alias backup="tar uPvf ~/backup-`lsb_release -r | cut -f 2`.tar /var/cache/apt/archives --exclude=/var/cache/apt/archivesa/partial/* --exclude=/var/cache/apt/archives/lock"
 # Use VIm as man pager
 vman () {
     export PAGER="/bin/sh -c \"unset PAGER;col -b -x | \

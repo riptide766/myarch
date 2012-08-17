@@ -70,7 +70,8 @@ sudo pacman -S zenity fcitx transmission-gtk gvfs ntp ibus-anthy ibus-pinyin vir
 
 
 # others
-sudo pacman -S git ascii ack gvim python-sphinx openssh tree qgit subversion dia arch-install-scripts xsel --noconfirm
+sudo pacman -S git abs ascii ack gvim python-sphinx openssh tree qgit subversion dia arch-install-scripts xsel --noconfirm
+yaourt -S trash-cli --noconfirm
 
 # office
 sudo pacman -S graphite  hsqldb-java hyphen icu  libidl2  libreoffice-zh-CN libwpd  libwps lpsolve orbit2  raptor  rasqal redland  libreoffice-base libreoffice-calc  libreoffice-common libreoffice-draw  libreoffice-writer

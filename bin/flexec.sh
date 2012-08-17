@@ -21,3 +21,16 @@ echo -n "[ $@ ] ==>  "
 
 # 打印命令样式
 sed -ne '3p' "$script_path"
+
+#7z l -slt freemind-bin-0.9.0.zip | grep Path | cut -d" " -f 3 | sed "1d" | xargs rm -rvf
+#alias -g FLEX=". $MTMKFLEX "
+#alias mv2soft="FLEX  'mv %1 ~/resources/softwave/'"
+#alias mv2doc="FLEX  'mv %1 ~/Documents/'"
+#alias mv2desk="FLEX  'mv %1 ~/Desktop/' "
+#alias mvto="FLEX 'mkdir -vp %1 && mv -v %{@:2} %1' "
+#alias mkdir2="FLEX 'mkdir -pv %1 && cd %1'" #创建并进入该目录
+#alias h="FLEX '%1 --help | less'"
+#alias ssh2="FLEX  'ssh -p %1 -qTfnN -D 7070 %2 '" # ssh翻墙
+#alias nohup2="FLEX 'nohup %1 > /dev/null 2>&1 & '" # 独立进程
+#alias xsel2="FLEX  ' %1 | xsel -b ' "
+
