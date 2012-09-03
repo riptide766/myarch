@@ -8,6 +8,15 @@ _modprobe_conf="/etc/modprobe.d/modprobe.conf"
 _bootloader_dev="/dev/sda"
 _grub_conf="/etc/default/grub"
 
+# systemd
+_install_systemd()
+{
+
+pacman -R initscripts sysvinit
+pacman -S systemd systemd-sysvcompat systemd-arch-units
+
+}
+
 # AUR client
 _install_yaourt()
 {
@@ -57,24 +66,25 @@ sudo grub-install --boot-directory=/boot --no-floppy --recheck --debug $_bootloa
 # software
 _install_software()
 {
+# popular software
+pacman -S zenity fcitx transmission-gtk gvfs ntp ibus-anthy ibus-pinyin virtualbox virtualbox-sourc:e virtualbox-modules wmctrl xbindkeys ntfs-3g p7zip unrar unzip chmsee epdfview stellarium freemind amule smplayer ristretto transmission-gtk firefox flashplugin terminator bash-completion scrot colordiff --noconfirm
+
+sudo pacman -S git zsh abs ascii ack gvim python-sphinx openssh tree qgit subversion dia arch-install-scripts xsel --noconfirm
+
+# office
+sudo pacman -S graphite  hsqldb-java hyphen icu  libidl2  libreoffice-zh-CN libwpd  libwps lpsolve orbit2  raptor  rasqal redland  libreoffice-base libreoffice-calc  libreoffice-common libreoffice-draw  libreoffice-writer
 
 # fonts
 sudo pacman -S wqy-bitmapfont wqy-zenhei ttf-dejavu ttf-arphic-ukai ttf-arphic-uming ttf-fireflysung rsync --noconfirm
 sudo yaourt -S ttf-microsoft-yahei --noconfirm
 #yaourt -S ttf-ms-fonts-zh_cn  --noconfirm
 #yaourt -S ttf-ms-fonts --noconfirm
-yaourt -S im-switch --noconfirm
-
-# popular software
-sudo pacman -S zenity fcitx transmission-gtk gvfs ntp ibus-anthy ibus-pinyin virtualbox virtualbox-sourc:e virtualbox-modules wmctrl xbindkeys ntfs-3g p7zip unrar unzip chmsee epdfview stellarium openjdk6 freemind amule smplayer ristretto transmission-gtk firefox flashplugin terminator bash-completion scrot colordiff --noconfirm
 
 
 # others
-sudo pacman -S git abs ascii ack gvim python-sphinx openssh tree qgit subversion dia arch-install-scripts xsel --noconfirm
 yaourt -S trash-cli --noconfirm
+yaourt -S xmind --noconfirm
 
-# office
-sudo pacman -S graphite  hsqldb-java hyphen icu  libidl2  libreoffice-zh-CN libwpd  libwps lpsolve orbit2  raptor  rasqal redland  libreoffice-base libreoffice-calc  libreoffice-common libreoffice-draw  libreoffice-writer
 }
 
 # setting alsa
@@ -109,29 +119,30 @@ grep -q -e "^GRUB_THEME" $_grub_conf ||  sed -i -e "/^#GRUB_THEME=/a GRUB_THEME=
 # modifying kernel parmater
 grep -q -e "GRUB_CMDLINE_LINUX_DEFAULT=.*acpi=off" $_grub_conf || sed -i -e "s/^GRUB_CMDLINE_LINUX_DEFAULT=\"[^\"]*/& acpi=off/" $_grub_conf
 
+sed -i -e "s/^GRUB_TIMEOUT=.*^/GRUB_TIMEOUT=1/" $_grub_conf
 
 # disable os probe
 grep -q -e "GRUB_DISABLE_OS_PROBER=true" $_grub_conf || echo -e "\nGRUB_DISABLE_OS_PROBER=true\n" >> $_grub_conf
-grep -q -e "menuentry 'Ubuntu 12.04'" /etc/grub.d/40_custom  || cat >> /etc/grub.d/40_custom << "EOF"
-menuentry 'Ubuntu 12.04' --class ubuntu --class gnu-linux --class gnu --class os {
-	recordfail
-	gfxmode $linux_gfx_mode
-	insmod gzio
-	insmod part_msdos
-	insmod ext2
-	set root='(hd0,msdos9)'
-	search --no-floppy --fs-uuid --set=root 6c7fbafe-845d-4277-b9d3-ab7c34516ef0
-	linux	/boot/vmlinuz-3.2.0-23-generic-pae root=UUID=6c7fbafe-845d-4277-b9d3-ab7c34516ef0 ro quiet acpi=off splash $vt_handoff
-	initrd	/boot/initrd.img-3.2.0-23-generic-pae
-}
-EOF
+#grep -q -e "menuentry 'Ubuntu 12.04'" /etc/grub.d/40_custom  || cat >> /etc/grub.d/40_custom << "EOF"
+#menuentry 'Ubuntu 12.04' --class ubuntu --class gnu-linux --class gnu --class os {
+	#recordfail
+	#gfxmode $linux_gfx_mode
+	#insmod gzio
+	#insmod part_msdos
+	#insmod ext2
+	#set root='(hd0,msdos9)'
+	#search --no-floppy --fs-uuid --set=root 6c7fbafe-845d-4277-b9d3-ab7c34516ef0
+	#linux	/boot/vmlinuz-3.2.0-23-generic-pae root=UUID=6c7fbafe-845d-4277-b9d3-ab7c34516ef0 ro quiet acpi=off splash $vt_handoff
+	#initrd	/boot/initrd.img-3.2.0-23-generic-pae
+#}
+#EOF
 
 sudo RUB_PREFIX="/boot/grub" grub-mkconfig -o /boot/grub/grub.cfg
 
 }
 
 
-# desktop icon 
+# desktop icon
 _config_desktopicon()
 {
 
@@ -153,13 +164,13 @@ EOF
 }
 
 
-
 # virtualbox
 _config_vbox()
 {
 
-grep -q -e "^MODULES" $_rc_conf || echo -e "\nMODULES=()" >> $_rc_conf
-grep -q -e "^MODULES.*vboxdrv" $_rc_conf || sudo sed -i "s/^MODULES=([^)]*/& vboxdrv/"  $_rc_conf
+#grep -q -e "^MODULES" $_rc_conf || echo -e "\nMODULES=()" >> $_rc_conf
+#grep -q -e "^MODULES.*vboxdrv" $_rc_conf || sudo sed -i "s/^MODULES=([^)]*/& vboxdrv/"  $_rc_conf
+echo vboxdrv > /etc/modules-load.d/virtualbox.conf
 
 }
 
@@ -167,10 +178,16 @@ grep -q -e "^MODULES.*vboxdrv" $_rc_conf || sudo sed -i "s/^MODULES=([^)]*/& vbo
 _config_locale()
 {
 
-echo -e '\nHOSTNAME="mattPC"\nLOCALE="en_US.UTF-8"' >> /etc/rc.conf
+#echo -e '\nHOSTNAME="mattPC"\nLOCALE="en_US.UTF-8"' >> /etc/rc.conf
 sed -i -e "s/#\(en_US.UTF-8.*\)/\1/" /etc/locale.gen
 ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 locale-gen
+echo mattPC > /etc/hostname
+echo LANG="en_US.UTF8" > /etc/locale.conf
+systemctl enable slim.service
+systemctl enable dhcpcd@.service
+systemctl enable syslog-ng.service
+systemctl enable graphical.target
 
 }
 

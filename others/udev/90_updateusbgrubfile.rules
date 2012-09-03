@@ -1,0 +1,5 @@
+KERNEL!="sd[b-z][0-9]", GOTO="auto_update_grub_file_end"
+IMPORT{program}="/sbin/blkid -o udev -p %N"
+ACTION=="add", ENV{ID_FS_LABEL_ENC}=="LIVEUSB_BOOT",RUN+="/bin/mkdir -p /media/$env{ID_FS_LABEL_ENC}", RUN+="/bin/mount /dev/%k /media/$env{ID_FS_LABEL_ENC}",RUN+="/media/update_usb_grubconfig.sh"
+ACTION=="remove", ENV{ID_FS_LABEL_ENC}=="LIVEUSB_BOOT",RUN+="/bin/umount -l /dev/%k", RUN+="/bin/rmdir /media/$env{ID_FS_LABEL_ENC}"
+LABEL="auto_update_grub_file_end"

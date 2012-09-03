@@ -39,7 +39,7 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 
 source ~/.zsh_aliases
-source ~/bin/aliaswrapper.sh 123
+source ~/bin/aliaswrapper.sh 
 
 ##在命令前插入 sudo {{{ #定义功能
 sudo-command-line() {

@@ -1,5 +1,12 @@
 # .zsh_aliases
 
+### hock
+
+#function chpwd(){
+#}
+
+### alias
+
 alias -g H='| head'
 alias -g T='| tail'
 alias -g G='| grep'
@@ -13,8 +20,16 @@ if [ $UID -ne 0 ]; then
     alias svim='sudo vim'
     alias root='sudo su'
     alias pacman='sudo pacman'
-    alias reboot='sudo reboot'
-    alias halt='sudo halt'
+	alias systemctl="sudo systemctl"
+	if [ -x "/bin/init" ]; then
+		alias reboot='sudo reboot'
+		alias halt='sudo halt'
+	else
+		alias reboot='systemctl reboot'
+		alias halt='systemctl halt'
+		alias poweroff='systemctl poweroff'
+		alias hibernate='systemctl hibernate'
+	fi
     alias update='sudo pacman -Su'
     alias netcfg='sudo netcfg2'
     alias mount='sudo mount'
@@ -69,8 +84,8 @@ alias mkdir3="mkdir -pv "
 alias del="trash "
 
 ### kits
+alias bak="\cp -Rb $1 $1.bak " # 简单备份
 alias ..="cd .."
-alias edit_rc="sudo gvim -f /etc/rc.conf &"
 alias rexbingkeys='killall -HUP xbindkeys'
 alias ccal='cal $(date +%m\ %Y)'
 alias lookpath='echo $PATH | tr ":" "\n"'
@@ -96,6 +111,7 @@ alias arch_grub_update="sudo GRUB_PREFIX="/boot/grub" grub-mkconfig -o /boot/gru
 
 ### gvim & edit
 
+alias 7="gvim /etc/rc.conf "
 alias 8="gvim -f ~/.vimrc &"
 alias 9="source ~/.zsh_aliases;echo done"
 alias 0="gvim ~/.zsh_aliases"
@@ -107,10 +123,12 @@ function gvims(){
 	gvim -S "$MTMKRES/$1"
 }
 
+# 自动完成函数
 function _compctl_gs () {
 	reply=(`ls -1 $MTMKRES/*vim |cut -d"/" -f 5 | tr "\n" " " `) 
 }
 
+# 自动完成绑定到函数上
 compctl -K _compctl_gs gvims
 
 ### history
@@ -141,5 +159,7 @@ alias tar_delete='tar --delete -f '
 alias tar_list='tar tf '
 alias tar_update='tar uPvf '
 alias tar_extract='tar xPvf '
-alias tar_clear="rm -rf `tar -tf $1` "
+function tar_clear {
+	rm -rf `tar -tf $1` 
+}
 
