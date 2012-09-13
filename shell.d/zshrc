@@ -42,6 +42,17 @@ source ~/.zsh_aliases
 source ~/bin/aliaswrapper.sh 
 
 ##在命令前插入 sudo {{{ #定义功能
+W-command-line() {
+[[ -z $BUFFER ]] && zle up-history
+[[ $BUFFER != W\ * ]] && BUFFER="W $BUFFER"
+zle end-of-line                 #光标移动到行末
+}
+zle -N W-command-line
+#定义快捷键为： [Esc] [Esc]
+bindkey "\ew" W-command-line
+#}}}
+
+##在命令前插入 sudo {{{ #定义功能
 sudo-command-line() {
 [[ -z $BUFFER ]] && zle up-history
 [[ $BUFFER != sudo\ * ]] && BUFFER="sudo $BUFFER"

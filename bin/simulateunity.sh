@@ -31,7 +31,7 @@ declare -A gridkeys=(
 	[lb]="z"
 )
 
-#	
+#s
 ### 配置区结束
 
 user=${SUDO_USER:-${USER}}
@@ -59,7 +59,7 @@ get_pos(){
 get_base(){
 	grep -E "$1" -n $0 | cut -d":" -f 1 
 }
-
+	
 setting(){
 	# jump or exec 
 	local base=`get_base "^declare\ \-A\ mapping"`
@@ -82,9 +82,15 @@ setting(){
 }
 
 jump_or_exec(){
-	entry=${mapping[$1]} 
-	wmctrl -a ${entry%\|*} -x || exec ${entry#*\|} &
+	entry=${mapping[$1]}
+	currentclazzname=$(wmctrl -lx | grep ` echo $(xprop -root | grep _NET_ACTIVE_WINDOW | head -1 | awk '{print $5}' | sed 's/,//' | sed 's/^0x/0x0/')` | cut -d" "  -f 4)
+	if [ $currentclazzname ==  "${entry%\|*}" ] ; then
+		xdotool getactivewindow windowminimize 
+	else
+		wmctrl -a ${entry%\|*} -x || exec ${entry#*\|} &
+	fi
 }
+
 
 switch_same_app(){
 	data=$(wmctrl -lxp | grep `echo $(xprop -root | grep _NET_ACTIVE_WINDOW | head -1 | awk '{print $5}' | sed 's/,//' | sed 's/^0x/0x0/')`)
@@ -117,6 +123,7 @@ install_tool()
 	
 	install_software wmctrl || exit 1
 	install_software xbindkeys || exit 1
+	install_software xdotool || exit 1
 	[[  -a $config_file ]] || {
 		xbindkeys -d > $config_file
 		chown $user:$group $config_file
@@ -185,8 +192,8 @@ usage(){
 cat <<EOF
 Usage:	commond [optins...]
 -i      安装相关软件
--s      更新快捷键配置到.xbindkeysrc
--S      切换到同一种程序的其他窗口
+-S      更新快捷键配置到.xbindkeysrc
+-s      切换到同一种程序的其他窗口
 -e app  切换或打开一个程序窗口	
 -g pos  移动窗口到指定位置
 -h      帮助信息
@@ -197,7 +204,8 @@ Usage:	commond [optins...]
 
 1）切换或打开程序   super + [1-9]
 2）切换相同程序窗口 alt + \`
-3) 九宫格移动窗口   super + [qweasdzxc]      
+3) 九宫格移动窗口   super + [qweasdzxc]
+4) 最小化当前窗口（已配置的） super + [1-9]
 
 
 
@@ -247,7 +255,7 @@ while getopts :sShig:e: opt ; do
 			switch_same_app
 			;;
 		i) # 安装依赖软件
-			install_tool	
+			install_tool
 			;;
 		e) # 切换或打开一个窗口
 			jump_or_exec $OPTARG
@@ -255,7 +263,6 @@ while getopts :sShig:e: opt ; do
 		:) 
 			echo missing argument
 			;;
-
 		?)
 			echo invaild option -- $OPTARG
 			usage

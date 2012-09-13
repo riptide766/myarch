@@ -67,7 +67,7 @@ sudo grub-install --boot-directory=/boot --no-floppy --recheck --debug $_bootloa
 _install_software()
 {
 # popular software
-pacman -S zenity fcitx transmission-gtk gvfs ntp ibus-anthy ibus-pinyin virtualbox virtualbox-sourc:e virtualbox-modules wmctrl xbindkeys ntfs-3g p7zip unrar unzip chmsee epdfview stellarium freemind amule smplayer ristretto transmission-gtk firefox flashplugin terminator bash-completion scrot colordiff --noconfirm
+pacman -S guake zenity diff2html fcitx transmission-gtk gvfs ntp ibus-anthy ibus-pinyin virtualbox virtualbox-sourc:e virtualbox-modules wmctrl xbindkeys ntfs-3g p7zip unrar unzip chmsee epdfview stellarium freemind amule smplayer ristretto transmission-gtk firefox flashplugin terminator bash-completion scrot colordiff --noconfirm
 
 sudo pacman -S git zsh abs ascii ack gvim python-sphinx openssh tree qgit subversion dia arch-install-scripts xsel --noconfirm
 

@@ -20,6 +20,8 @@ Bundle 'better-snipmate-snippet'
 Bundle 'Better-Javascript-Indentation'
 Bundle 'emacscommandline'
 Bundle 'auto_mkdir'
+"Bundle 'SuperTab'
+"Bundle 'statusline.vim'
 "Bundle 'YankRing.vim'
 "Bundle 'surround.vim'
 Bundle 'JavaScript-syntax'
@@ -27,9 +29,13 @@ Bundle 'xul.vim'
 Bundle 'vim-coffee-script'
 "Bundle 'WinMove'
 
+"let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+"let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 
 filetype plugin indent on     " required!
 
+"let g:SuperTabRetainCompletionType=2
+"let g:SuperTabDefaultCompletionType="<C-P>"
 
 " 快捷键设置-------------------------------------------------------------------
 
@@ -155,10 +161,10 @@ let javascript_enable_domhtmlcss=1
 
 
 " 替换当前单词
-nmap <silent> S :let @x=@"<CR>"_diw"xP
+"nmap <silent> S :let @x=@"<CR>"_diw"xP
 
 " 删除当前单词
-nmap <silent> F :let @x<CR>"xdiw
+"nmap <silent> F :let @x<CR>"xdiw
 
 " 不要使用vi的键盘模式，而是vim自己的
 set nocompatible
@@ -322,6 +328,58 @@ function! MutilExec()
 	endif
 endfunction
 
+
+" 上一个光标位置
+command -nargs=0 GotoPreviousPos :call GotoPreviousPos()
+
+function GotoPreviousPos()
+    if exists( "b:blue_previous_pos" ) && len( b:blue_previous_pos ) > 1 && b:blue_current_pos >= 0
+        let b:blue_current_pos = b:blue_current_pos - 1
+        call setpos( "." , b:blue_previous_pos[ b:blue_current_pos ] )
+    endif
+endfunction
+
+" 下一个光标位置
+
+command -nargs=0 GotoNextPos :call GotoNextPos()
+
+function GotoNextPos()
+    if exists( "b:blue_previous_pos" ) && len( b:blue_previous_pos ) > b:blue_current_pos + 1
+        let b:blue_current_pos = b:blue_current_pos + 1
+        call setpos( "." , b:blue_previous_pos[ b:blue_current_pos ] )
+    endif
+endfunction
+
+" 记录光标位置
+
+function RecordPreviousPos()
+
+    let s:pos =  getpos(".")
+
+    if !exists( "b:blue_previous_pos" )
+       let b:blue_previous_pos = []
+       let b:blue_current_pos = 0
+    endif
+
+    if ( len( b:blue_previous_pos ) > 500 )
+        unlet b:blue_previous_pos[0]
+    endif
+
+    if len( b:blue_previous_pos ) > 0 && b:blue_current_pos != len( b:blue_previous_pos ) - 1
+        call remove( b:blue_previous_pos , -1 )
+    endif
+
+    call add( b:blue_previous_pos , s:pos )
+    let b:blue_current_pos = len( b:blue_previous_pos ) - 1
+
+endfunction
+
+autocmd CursorMovedI * call RecordPreviousPos()
+
+:imap <C-Left> <Esc>:GotoPreviousPos<CR>i
+:imap <C-Right> <Esc>:GotoNextPos<CR>i
+:map <C-Left> :GotoPreviousPos<CR>
+:map <C-Right> :GotoNextPos<CR>
 
 " shift tab pages
 nnoremap <C-n> :tabp<CR>
