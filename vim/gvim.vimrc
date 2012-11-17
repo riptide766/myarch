@@ -220,6 +220,7 @@ source $VIMRUNTIME/menu.vim
 " 设置字体。
 "set guifont=Liberation\Mono\ 12
 set guifont=YaHei\ Consolas\ Hybrid\ 10  
+"set guifont=文泉驿等宽微米黑\ 12
 
 "set  guifont=Fixedsys\Excelsior\3.01\ 14
 
@@ -322,6 +323,9 @@ function! MutilExec()
 	endif
 	if(suffix=='html')
 		:!firefox %
+	endif
+	if(suffix=='lua')
+		:!lua %
 	endif
 	if(suffix=='sh')
 		:!source %

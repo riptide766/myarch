@@ -1,22 +1,48 @@
 #! /bin/bash
 
-fns=./install.d/installarch.sh
-if [ -L "$0" ] ; then
-	rslt=`ls -l $0  | cut -d\> -f2` 
-	fns=`dirname "$rslt"`/$fns
-fi
+# maintaince.sh所在目录
+_workdir=$(dirname `readlink -f $0`)
+
+# 函数库
+_fns="$_workdir"/install.d/installarch.sh
+
+# slim登录管理器配置文件
+_slim_conf="/etc/slim.conf"
+
+_username="matt"
+
+_sudoers="/etc/sudoers"
+
+# pacman包管理配置文件
+_pacman_conf="/etc/pacman.conf"
+
+_bootloader_dev="/dev/sda"
+
+_grub_conf="/etc/default/grub"
+
+# 软件安装列表
+_software_list="$_workdir"/software_list
+
+# 安装软件
+function installer()
+{
+	_cmd="pacman"
+	which yaourt &> /dev/null && _cmd="yaourt"
+	"$_cmd" -S  "$@"
+}
 
 exec_by_name()
 {
 	echo "invoke ..."
-	grep "$1.*()$" $fns | cat -b
+	grep "$1.*()$" $_fns | cat -b
 	echo "===================================="
 	read -p "are you sure?(y/n) " rslt
 	[ "${rslt:0:1}" = "n" ] && continue
-	for fn in `grep "$1.*()$" $fns`;  do
+	for fn in `grep "$1.*()$" $_fns`;  do
 		${fn:0:-2}
 	done
 }
+
 
 main()
 {
@@ -25,9 +51,9 @@ for act in $@ ; do
 		[^\_]*)
 			case $act in
 				list)
-					grep "^_.*()$" $fns |  tr -d "()"  ;;
+					grep "^_.*()$" $_fns |  tr -d "()"  ;;
 				help)
-					grep -B 1 "^_.*()$" $fns |  tr -d "()"  | more ;;
+					grep -B 1 "^_.*()$" _$fns |  tr -d "()"  | more ;;
 				*)
 					exec_by_name $act ;;
 			esac
@@ -39,6 +65,6 @@ for act in $@ ; do
 done
 }
 
-source $fns
+source $_fns
 
 main $@

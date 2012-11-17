@@ -49,6 +49,7 @@ latest_version=`get_latest_version`
 iso_file=${download_dir}/"archlinux-"${latest_version}".iso"
 tmp_file=${iso_file}".tmp"
 config_file=${user_home}/".archlinuxiso"
+log_file=${user_home}/".update_archlinuxiso_log"
 
 update_iso
 

@@ -1,22 +1,24 @@
-export LANG="en_US.UTF-8"
+#export LANG="en_US.UTF-8"
+#export PATH=.:$PATH
+#export EDITOR=vim
+#export TMPDIR="$HOME/myaourt"
 export PATH=$HOME/bin:$PATH
-export PATH=.:$PATH
-export EDITOR=vim
-export TMPDIR="$HOME/myaourt"
 
 # 备份库
 export MTMKRES=$HOME/resources
-export MTMKFLEX=$MTMKRES/mygit/stuff/bash/flexec.sh
+#export MTMKFLEX=$MTMKRES/mygit/stuff/bash/flexec.sh
 
 # maven
-export M2_HOME=$MTMKRES/mybin/maven
-export PATH=$M2_HOME/bin:$PATH
+#export M2_HOME=$MTMKRES/mybin/maven
+#export PATH=$M2_HOME/bin:$PATH
 
 # jdk
-export JAVA_HOME=$MTMKRES/oraclejava/jdk1.7.0_02
-export CLASSPATH=.:$JAVA_HOME/lib
-export PATH=$JAVA_HOME/bin:$PATH
+#export JAVA_HOME=$MTMKRES/oraclejava/jdk1.7.0_02
+#export CLASSPATH=.:$JAVA_HOME/lib
+#export PATH=$JAVA_HOME/bin:$PATH
+
+#export PATH="/home/matt/Desktop/android-sdk-linux/":$PATH
 
 # nodejs
 # export NODE_PATH=/usr/local/lib/node_modules
-
+# echo $PATH

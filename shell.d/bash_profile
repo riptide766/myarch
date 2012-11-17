@@ -22,4 +22,7 @@ if [ -d "$HOME/bin" ] ; then
 fi
 
 # services
-pgrep xbindkeys >/dev/null 2>&1 || xbindkeys
+if [  "$DESKTOP_SESSION" == "xfce" ]; then
+	pgrep xbindkeys >/dev/null 2>&1 || xbindkeys
+fi
+

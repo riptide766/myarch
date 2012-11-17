@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh configuration.
-ZSH=$HOME/.oh-my-zsh
+ZSH=/usr/share/oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -8,6 +8,8 @@ ZSH=$HOME/.oh-my-zsh
 #ZSH_THEME="robbyrussell"
 #ZSH_THEME="random"
 ZSH_THEME="terminalparty"
+#ZSH_THEME="my"
+#ZSH_THEME="fishy"
 # dstufft.zsh-theme
 
 # Example aliases
@@ -38,17 +40,18 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 
-source ~/.zsh_aliases
-source ~/bin/aliaswrapper.sh 
 
-##在命令前插入 sudo {{{ #定义功能
+source ~/.zsh_aliases
+source ~/bin/aliaswrapper.sh
+
+##在命令前插入 W {{{ #定义功能
 W-command-line() {
 [[ -z $BUFFER ]] && zle up-history
 [[ $BUFFER != W\ * ]] && BUFFER="W $BUFFER"
 zle end-of-line                 #光标移动到行末
 }
 zle -N W-command-line
-#定义快捷键为： [Esc] [Esc]
+#定义快捷键为： [Esc] [w]
 bindkey "\ew" W-command-line
 #}}}
 
@@ -64,5 +67,35 @@ bindkey "\e\e" sudo-command-line
 #}}}
 
 # services
-pgrep xbindkeys >/dev/null 2>&1 || xbindkeys
+#pgrep xbindkeys >/dev/null 2>&1 || xbindkeys
+autoload -U url-quote-magic
+zle -N self-insert url-quote-magic
+#export LANG="en_US.UTF-8"
+#export PATH=.:$PATH
+#export EDITOR=vim
+#export TMPDIR="$HOME/myaourt"
+export PATH=$HOME/bin:$PATH
+export EDITOR="vim"
+export PYTHONPATH="/usr/lib/python2.7/site-packages/"
+# 备份库
+export MTMKRES=$HOME/resources
+#export MTMKFLEX=$MTMKRES/mygit/stuff/bash/flexec.sh
 
+# maven
+export M2_HOME=$MTMKRES/mybin/maven
+export PATH=$M2_HOME/bin:$PATH
+
+#tmux > /dev/null 2> /dev/null 
+# jdk
+export JAVA_HOME=$MTMKRES/oraclejava/jdk1.7.0_02
+export CLASSPATH=.:$JAVA_HOME/lib
+export PATH=$JAVA_HOME/bin:$PATH
+
+#export PATH="/home/matt/Desktop/android-sdk-linux/":$PATH
+
+# nodejs
+# export NODE_PATH=/usr/local/lib/node_modules
+# echo $PATH
+
+# 调整亮度 
+#sudo sh -c "echo 6 > /sys/class/backlight/acpi_video0/brightness"

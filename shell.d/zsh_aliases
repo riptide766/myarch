@@ -8,7 +8,7 @@
 function precmd(){
 	local rslt=$?
 	[ "$WATCH_FOR_CMD" ] || return
-	local cmd="`history | tail -n1 | cut -d\  -f 5-`"
+	local cmd="`history | tail -n1 | cut -d" " -f 4-`"
 	notify-send $cmd $rslt
 	WATCH_FOR_CMD=
 }
@@ -21,7 +21,7 @@ alias -g T='| tail'
 alias -g G='| grep'
 alias -g L="| less"
 alias -g HL="--help"
-alias -g W="WATCH_FOR_CMD=123;"
+alias -g W="WATCH_FOR_CMD=watch;"
 
 # privileged access
 if [ $UID -ne 0 ]; then
@@ -30,10 +30,12 @@ if [ $UID -ne 0 ]; then
     alias svim='sudo vim'
     alias root='sudo su'
     alias pacman='sudo pacman'
+
 	alias systemctl="sudo systemctl"
-	if [ -x "/bin/init" ]; then
+	if [[ -x "/bin/init" || -x "/sbin/init" ]]; then
 		alias reboot='sudo reboot'
 		alias halt='sudo halt'
+		alias poweroff='sudo poweroff'
 	else
 		alias reboot='systemctl reboot'
 		alias halt='systemctl halt'
@@ -41,20 +43,22 @@ if [ $UID -ne 0 ]; then
 		alias hibernate='systemctl hibernate'
 	fi
     alias update='sudo pacman -Su'
-    alias netcfg='sudo netcfg2'
+    alias netcfg='sudo netcfg'
     alias mount='sudo mount'
     alias umount='sudo umount'
+    alias aptitude='sudo aptitude'
 fi
 
 # modified commands
 alias diff='colordiff'              # requires colordiff package
 alias grep='grep --color=auto'
 alias more='less'
-alias df='df -h'
+alias df='df -h | grep -v "^[^/]"'
 alias du='du -c -h'
 alias mkdir='mkdir -p -v'
 alias ping='ping -c 5'
 alias vi="vim "
+alias gvim="gvim -f "
 
 # new commands
 alias da='date "+%A, %B %d, %Y [%T]"'
@@ -85,18 +89,35 @@ alias chgrp='chgrp --preserve-root'
 # 文件和目录
 alias of="xdg-open "
 alias ls_d="\ls -1d */"
-alias mv2soft="mv $1 ~/resources/softwave/"
-alias mv2doc="mv $1 ~/Documents/"
-alias mv2desk="mv $1 ~/Desktop/ "
+alias mv2soft="mv -v $1 ~/resources/softwave/"
+alias mv2doc="mv -v $1 ~/Documents/"
+alias mv2desk="mv -v $1 ~/Desktop/ "
 alias mvto="mkdir -vp $1 && mv -v ${@:2} $1 "
 alias mkdir2="mkdir -pv $1 && cd $1" 
 alias mkdir3="mkdir -pv "
 alias del="trash "
 
+### scrot 
+alias scrotf="scrot"
+alias scrots="scrot -s"
+alias scrotc="scrot -bs"
+
+
+
 ### kits
+alias viwhich="vi `which $1`"
+alias genxdgmenu="xdg_menu --format awesome --root-menu /etc/xdg/menus/arch-applications.menu > ~/.config/awesome/menu.lua"
+alias unlockpacman="sudo rm -vi /var/lib/pacman/db.lck"
+alias unlockamule="sudo rm -vi ~/.aMule/muleLock"
+alias lns="ln -sv "
+alias fixdeskfile="fixfilename.py ~/Desktop/%*"
+alias sc2d="xdg-desktop-icon install "
+alias R=ranger
 alias bak="\cp -Rb $1 $1.bak " # 简单备份
+alias xlogout="xfce4-session-logout  --logout"
 alias ..="cd .."
-alias rexbingkeys='killall -HUP xbindkeys'
+alias link2desk="ln -s $1 ~/Desktop/"
+#alias rexbingkeys='killall -HUP xbindkeys'
 alias ccal='cal $(date +%m\ %Y)'
 alias lookpath='echo $PATH | tr ":" "\n"'
 alias watchprocess='watch "ps -eo pcpu,user,pid,cmd --sort -pcpu | head -6 "'
@@ -122,21 +143,22 @@ alias arch_grub_update="sudo GRUB_PREFIX="/boot/grub" grub-mkconfig -o /boot/gru
 
 ### gvim & edit
 
-alias 7="gvim ~/resources/mygit/myarch/install.d/installarch.sh"
-alias 8="gvim -f ~/.vimrc &"
+alias 7="vim ~/resources/mygit/myarch/install.d/installarch.sh"
+alias 8="vim ~/.vimrc &"
 alias 9="source ~/.zsh_aliases;echo done"
-alias 0="gvim ~/.zsh_aliases"
+alias 0="vim ~/.zsh_aliases && 9"
+alias 6="vim ~/.config/awesome/rc.lua"
 alias gvimp="gvim -p "
 alias gvimf='gvim --remote-silent-tab $1'
 
 # 打开一个固定目录下的vim会话
 function gvims(){
-	gvim -S "$MTMKRES/$1"
+	gvim -S "$MTMKRES/visession/$1"
 }
 
 # 自动完成函数
 function _compctl_gs () {
-	reply=(`ls -1 $MTMKRES/*vim |cut -d"/" -f 5 | tr "\n" " " `) 
+	reply=(`ls -1 $MTMKRES/visession/*vim |cut -d"/" -f 6 | tr "\n" " " `) 
 }
 
 # 自动完成绑定到函数上
@@ -164,6 +186,17 @@ alias pacf="pacman -Ql"    # '[f]iles'          - list all files installed by a 
 alias pacc="pacman -Sc"    # '[c]lean cache'    - delete all not currently installed package files
 alias pacm="makepkg -fci"  # '[m]ake'           - make package from PKGBUILD file in current directory
 alias pacw="pacman -Sw"    # 'don[w]load'       - download packages only
+
+### aptitude & dpkg & apt-get
+
+alias apt="aptitude install"
+alias aptu="aptitude update"
+alias apts="aptitude search"
+alias apti="aptitude show"
+alias aptr="aptitude purge"
+alias apto="dpkg -S"
+alias aptw="aptitude download"
+alias aptf="dpkg -L"
 
 ### tar
 alias tar_delete='tar --delete -f '
