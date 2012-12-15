@@ -105,6 +105,8 @@ alias scrotc="scrot -bs"
 
 
 ### kits
+alias dd2="dd if = $1 of = $2 bs=1M "
+alias chmodx="chmod +x "
 alias viwhich="vi `which $1`"
 alias genxdgmenu="xdg_menu --format awesome --root-menu /etc/xdg/menus/arch-applications.menu > ~/.config/awesome/menu.lua"
 alias unlockpacman="sudo rm -vi /var/lib/pacman/db.lck"

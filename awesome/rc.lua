@@ -6,6 +6,10 @@ require("awful.rules")
 require("beautiful")
 -- Notification library
 require("naughty")
+require("menu")
+require("naughty")
+vicious = require("vicious")
+-- 
 
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
@@ -34,11 +38,11 @@ end
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, and wallpapers
-beautiful.init("/usr/share/awesome/themes/default/theme.lua")
-
+beautiful.init("/usr/share/awesome/themes/zenburn/theme.lua")
 -- This is used later as the default terminal and editor to run.
-terminal = "terminal"
+terminal = "terminator"
 editor = os.getenv("EDITOR") or "nano"
+myhome = os.getenv("HOME")
 editor_cmd = terminal .. " -e " .. editor
 
 -- Default modkey.
@@ -51,18 +55,18 @@ modkey = "Mod4"
 -- Table of layouts to cover with awful.layout.inc, order matters.
 layouts =
 {
-    awful.layout.suit.floating,
     awful.layout.suit.tile,
-    awful.layout.suit.tile.left,
-    awful.layout.suit.tile.bottom,
-    awful.layout.suit.tile.top,
-    awful.layout.suit.fair,
-    awful.layout.suit.fair.horizontal,
-    awful.layout.suit.spiral,
-    awful.layout.suit.spiral.dwindle,
-    awful.layout.suit.max,
-    awful.layout.suit.max.fullscreen,
-    awful.layout.suit.magnifier
+    awful.layout.suit.floating,
+    --awful.layout.suit.tile.left,
+awful.layout.suit.tile.bottom,
+    --awful.layout.suit.tile.top,
+    --awful.layout.suit.fair,
+    --awful.layout.suit.fair.horizontal,
+    --awful.layout.suit.spiral,
+    --awful.layout.suit.spiral.dwindle,
+    --awful.layout.suit.max,
+    --awful.layout.suit.max.fullscreen,
+    --awful.layout.suit.magnifier
 }
 -- }}}
 
@@ -91,15 +95,60 @@ myscrotmenu ={
 
 mymainmenu = awful.menu({ items = { { "awesome", myawesomemenu, beautiful.awesome_icon },
                                     { "scrot(&2)",  myscrotmenu},
+                                    { "applications(&3)", xdgmenu },
                                     { "open terminal", terminal },
-                                    { "&logout", "logout.sh" }
-                                  }
+                                    { "&amule", "amule" },
+                                    { "&bt", "transmission-gtk" },
+                                    { "&eclipe", myhome .. "/eclipse/eclipse" },
+                                    { "&gvim", "gvim" },
+                                    { "&smplayer", "smplayer" },
+                                    { "virtualbo&x", "virtualbox" },
+                                    { "&firefox", "firefox" },
+                                    { "free&mind", "freemind" },
+                                    { "e&vince", "evince" },
+                                    { "l&ogout", myhome .. "/bin/logout.sh" },
+                                  },
                         })
+
+--mymainmenu.menu_keys.up={"j","k"}
 
 mylauncher = awful.widget.launcher({ image = image(beautiful.awesome_icon),
                                      menu = mymainmenu })
 -- }}}
 
+-- {{{ Status monitor widgets
+myspacer = widget({ type = "textbox", name = "myspacer" })
+myseparator = widget({ type = "textbox", name = "myseparator"})
+myspacer.text = " "
+myseparator.text = '<span color="' .. beautiful.bg_focus .. '">|</span>'
+
+-- {{{ CPU
+-- Initialize widget
+cpuwidget = widget({ type = "textbox" })
+-- Register widget
+vicious.register(cpuwidget, vicious.widgets.cpu, "$1%")
+-- }}}
+
+-- Initilize widget
+volwidget = widget({ type = "textbox" })
+-- Register widget
+vicious.register(volwidget, vicious.widgets.volume, " $1% ", 2, "Master")
+
+-- {{{ Memory
+mymemicon = widget({ type = 'imagebox', name = 'mymemicon'})
+mymemicon.image = image(beautiful.widget_mem)
+memwidget = widget({ type = 'textbox', name = 'memwidget'})
+vicious.register(memwidget, vicious.widgets.mem, '$2M')
+-- }}}
+
+-- {{{ Battery
+batteryicon = widget({ type = 'imagebox', name = 'batteryicon'})
+batterywidget = widget({ type = 'textbox', name = 'batterywidget'})
+batteryicon.image = image(beautiful.widget_bat)
+vicious.register(batterywidget, vicious.widgets.bat, "$1$2%", 60, "BAT0")
+
+-- }}}
+--
 -- {{{ Wibox
 -- Create a textclock widget
 mytextclock = awful.widget.textclock({ align = "right" })
@@ -182,8 +231,11 @@ for s = 1, screen.count() do
             layout = awful.widget.layout.horizontal.leftright
         },
         mylayoutbox[s],
+		s == 1 and mysystray or nil,
         mytextclock,
-        s == 1 and mysystray or nil,
+		myseparator, memwidget , aymemicon ,
+		myseparator, cpuwidget , aymemicon ,
+		myseparator, volwidget , aymemicon ,
         mytasklist[s],
         layout = awful.widget.layout.horizontal.rightleft
     }
@@ -198,8 +250,13 @@ root.buttons(awful.util.table.join(
 ))
 -- }}}
 
--- {{{ Key bindings
+-- {{{ Key binding
+--
 globalkeys = awful.util.table.join(
+ awful.key({ "Mod1" }, "Escape", function ()
+     -- If you want to always position the menu on the same place set coordinates
+     local cmenu = awful.menu.clients({width=245}, { keygrabber=true, coords={x=525, y=330} })
+ end),
     awful.key({ modkey,           }, "Left",   awful.tag.viewprev       ),
     awful.key({ modkey,           }, "Right",  awful.tag.viewnext       ),
     awful.key({ modkey,           }, "Escape", awful.tag.history.restore),
@@ -246,6 +303,10 @@ globalkeys = awful.util.table.join(
 
     awful.key({ modkey, "Control" }, "n", awful.client.restore),
 
+	-- customize
+	awful.key({ modkey,			  }, "d",  function() awful.tag.viewonly(tags[1][9])end),
+	awful.key({ modkey,			  }, "s",  function() awful.tag.viewonly(tags[1][8])end),
+
     -- Prompt
     awful.key({ modkey },            "r",     function () mypromptbox[mouse.screen]:run() end),
 
@@ -289,6 +350,7 @@ end
 -- Be careful: we use keycodes to make it works on any keyboard layout.
 -- This should map on the top row of your keyboard, usually 1 to 9.
 for i = 1, keynumber do
+
     globalkeys = awful.util.table.join(globalkeys,
         awful.key({ modkey }, "#" .. i + 9,
                   function ()
@@ -340,6 +402,14 @@ awful.rules.rules = {
       properties = { floating = true } },
     { rule = { class = "pinentry" },
       properties = { floating = true } },
+    { rule = { class = "Amule" },
+      properties = { tag = tags[1][3] } },
+    { rule = { class = "Thunar" },
+      properties = { tag = tags[1][9] } },
+    { rule = { class = "Transmission-gtk" },
+      properties = { tag = tags[1][3] } },
+    { rule = { class = "Terminator", name="desktop" },
+      properties = { tag = tags[1][8] } },
     { rule = { class = "gimp" },
       properties = { floating = true } },
     -- Set Firefox to always map on tags number 2 of screen 1.
@@ -381,12 +451,21 @@ client.add_signal("unfocus", function(c) c.border_color = beautiful.border_norma
 --
 require("autostart")
 autostart.run_once_list{
-    "wmname LG3D",
-    "fcitx",
-    "clipit",
-    "lanuchy",
-    "guake -e ranger",
-    "batti",
-    "firefox",
-    "amule",
+	"wmname LG3D",
+	"fcitx",
+	--"ibus-daemon",
+	"clipit",
+	--"lanuchy",
+	"guake -e ranger",
+	--"batti",
+	"firefox",
+	"amule" ,
+	"thunar" ,
+	{"terminator" ,"terminator -T desktop -e ' exec tmux' " },
 }
+
+awful.menu.menu_keys.up = { "k" }
+awful.menu.menu_keys.down = { "j" }
+awful.menu.menu_keys.exec = { "l" }
+awful.menu.menu_keys.back = { "h" }
+

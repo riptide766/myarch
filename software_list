@@ -41,7 +41,7 @@ freemind
 amule
 smplayer
 ristretto
-firefox
+#firefox
 flashplugin
 terminator
 bash-completion
@@ -64,3 +64,8 @@ ranger
 autojump
 lm_sensors
 oh-my-zsh-git
+uget
+aria2
+ffmpeg
+xorg-server-xephyr
+

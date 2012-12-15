@@ -1,5 +1,6 @@
 # Path to your oh-my-zsh configuration.
-ZSH=/usr/share/oh-my-zsh
+#ZSH=/usr/share/oh-my-zsh
+ZSH=~/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -87,7 +88,7 @@ export PATH=$M2_HOME/bin:$PATH
 
 #tmux > /dev/null 2> /dev/null 
 # jdk
-export JAVA_HOME=$MTMKRES/oraclejava/jdk1.7.0_02
+export JAVA_HOME=$MTMKRES/oraclejava/jdk1.7.0_05
 export CLASSPATH=.:$JAVA_HOME/lib
 export PATH=$JAVA_HOME/bin:$PATH
 

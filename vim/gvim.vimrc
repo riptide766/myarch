@@ -27,12 +27,21 @@ Bundle 'auto_mkdir'
 Bundle 'JavaScript-syntax'
 Bundle 'xul.vim'
 Bundle 'vim-coffee-script'
+Bundle 'c.vim'
+Bundle 'bash-support.vim'
+Bundle 'derekwyatt/vim-scala'
+"Bundle 'scala.vim'
 "Bundle 'WinMove'
 
 "let &t_SI = "\<Esc>]50;CursorShape=1\x7"
 "let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 
 filetype plugin indent on     " required!
+" bash-support 
+let g:BASH_TemplateOverriddenMsg = 'yes'
+let g:BASH_AuthorName   = 'mattmonkey'
+let g:BASH_Email        = 'riptide766@gmail.com'
+let g:BASH_Company      = ''
 
 "let g:SuperTabRetainCompletionType=2
 "let g:SuperTabDefaultCompletionType="<C-P>"
@@ -218,8 +227,8 @@ set imcmdline
 source $VIMRUNTIME/delmenu.vim 
 source $VIMRUNTIME/menu.vim
 " 设置字体。
-"set guifont=Liberation\Mono\ 12
-set guifont=YaHei\ Consolas\ Hybrid\ 10  
+set guifont=Liberation\Mono\ 12
+"set guifont=YaHei\ Consolas\ Hybrid\ 10  
 "set guifont=文泉驿等宽微米黑\ 12
 
 "set  guifont=Fixedsys\Excelsior\3.01\ 14

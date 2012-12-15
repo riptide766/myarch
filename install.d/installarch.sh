@@ -30,8 +30,9 @@ pacman -Sy yaourt base-devel --noconfirm
 _install_X11()
 {
 
-pacman -S xorg-server xorg-server-utils xorg-xinit xorg-utils xfce4 xfce4-goodies nvidia nvidia-utils dbus --noconfirm
-nvidia-xconfig 
+pacman -S xorg-server xorg-server-utils xorg-xinit xorg-utils --noconfirm
+#xfce4 xfce4-goodies nvidia nvidia-utils dbus --noconfirm
+#nvidia-xconfig 
 
 }
 
@@ -122,7 +123,7 @@ _config_slim()
 
 # appending themes to slim.conf
 # grep -q -e "^current_theme\s*default" $_slim_conf && sed -i -e "s/\(current_theme\ *\)\ *\(default\)/\1fingerprint,flat,archlinux-darch-white/" $_slim_conf
-grep -q -e "^current_theme\s*default" $_slim_conf && sed -i -e "s/\(current_theme\ *\)\ *\(default\)/\1archlinux-darch-white/" $_slim_conf
+#grep -q -e "^current_theme\s*default" $_slim_conf && sed -i -e "s/\(current_theme\ *\)\ *\(default\)/\1archlinux-darch-white/" $_slim_conf
 # appending slim to daemon
 #grep -q -e "^DAEMONS=(.* dbus slim" $_rc_conf || sed -i "s/^DAEMONS=([^)]*/& dbus slim/" $_rc_conf
 # setting default user
