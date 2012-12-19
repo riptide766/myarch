@@ -105,6 +105,11 @@ alias scrotc="scrot -bs"
 
 
 ### kits
+alias swapset50="sudo sysctl vm.swappiness=50"
+alias swapset100="sudo sysctl vm.swappiness=100"
+alias swapset10="sudo sysctl vm.swappiness=10"
+alias tmux2work="tmux attach -t work"
+alias wmctrll="wmctrl -xl"
 alias dd2="dd if = $1 of = $2 bs=1M "
 alias chmodx="chmod +x "
 alias viwhich="vi `which $1`"
